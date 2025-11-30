@@ -1,0 +1,5733 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+config/AppConfig.java
+config/AWSConfig.java
+controller/AdminHouseRegisterController.java
+controller/AnalyticController.java
+controller/AuthController.java
+controller/BannerController.java
+controller/HouseAdminController.java
+controller/HouseController.java
+controller/HouseRegistrationController.java
+controller/HouseRequestManagementController.java
+controller/ImageController.java
+controller/InvestorController.java
+controller/ProjectAdminController.java
+controller/ProjectController.java
+controller/PromotionController.java
+controller/TestAuth.java
+controller/TestController.java
+controller/TestRoleGuard.java
+controller/UserController.java
+dto/admin/ApproveDto.java
+dto/admin/RejectDto.java
+dto/analytic/AnalyticResponseDTO.java
+dto/auth/LoginRequestDto.java
+dto/auth/LoginResponse.java
+dto/auth/RegisterRequestDto.java
+dto/auth/RegisterResponse.java
+dto/banner/BannerCreateRequestDTO.java
+dto/banner/BannerCreateResultDTO.java
+dto/banner/BannerDeleteResultDTO.java
+dto/banner/BannerDTO.java
+dto/banner/BannerEditRequestDTO.java
+dto/banner/BannerEditResultDTO.java
+dto/FilterDTO.java
+dto/house_register/HouseRegisterRequestDto.java
+dto/house_register/HouseRegisterRespondDto.java
+dto/house_sell/SellRequestDto.java
+dto/house/HouseCreateAdminDto.java
+dto/house/HouseCreateInvestorDto.java
+dto/house/HouseDetailDto.java
+dto/house/HouseEditAdminRequestDto.java
+dto/house/HouseEditInvestorDto.java
+dto/house/HouseRequestDto.java
+dto/house/HouseSearchFilterRequestDto.java
+dto/house/HouseSearchRequestDto.java
+dto/house/LocationDto.java
+dto/house/RenovateDto.java
+dto/house/RentalDto.java
+dto/image/CreateImageDto.java
+dto/image/ImageDto.java
+dto/investor/SellHouseRequestDto.java
+dto/PageResponseDto.java
+dto/project/ProjectCreateDto.java
+dto/project/ProjectResponseDto.java
+dto/promotion/action/SetActionRequest.java
+dto/promotion/condition/AddCompositeConditionRequest.java
+dto/promotion/condition/ConditionSpecDto.java
+dto/promotion/CreatePromotionDto.java
+dto/promotion/PromotionResponseDto.java
+dto/promotion/UpdatePromotionDto.java
+dto/user/UserDataDto.java
+dto/user/UserRequestDto.java
+dto/user/UserRespondDto.java
+entity/house_register/HouseRegister.java
+entity/house_register/HouseRegisterId.java
+entity/house_register/HouseVisitRegistration.java
+entity/house/Address.java
+entity/house/House.java
+entity/house/HouseRenovate.java
+entity/house/HouseRental.java
+entity/house/HouseRequest.java
+entity/image/Image.java
+entity/project/Project.java
+entity/promotion/promotion_action/ActionFactory.java
+entity/promotion/promotion_action/builder/ActionBuilder.java
+entity/promotion/promotion_action/builder/FixedAmountDiscountActionBuilder.java
+entity/promotion/promotion_action/builder/GiftActionBuilder.java
+entity/promotion/promotion_action/builder/PercentageDiscountActionBuilder.java
+entity/promotion/promotion_action/FixedAmountDiscountAction.java
+entity/promotion/promotion_action/GiftAction.java
+entity/promotion/promotion_action/PercentageDiscountAction.java
+entity/promotion/promotion_action/PromotionAction.java
+entity/promotion/promotion_condition/builder/ConditionBuilder.java
+entity/promotion/promotion_condition/builder/DateRangeConditionBuilder.java
+entity/promotion/promotion_condition/builder/MinPriceConditionBuilder.java
+entity/promotion/promotion_condition/builder/ProductCategoryConditionBuilder.java
+entity/promotion/promotion_condition/ConditionFactory.java
+entity/promotion/promotion_condition/ConditionListConverter.java
+entity/promotion/promotion_condition/conditions/CompositeCondition.java
+entity/promotion/promotion_condition/conditions/DateRangeCondition.java
+entity/promotion/promotion_condition/conditions/MinimumPriceCondition.java
+entity/promotion/promotion_condition/conditions/ProductCategoryCondition.java
+entity/promotion/promotion_condition/conditions/PromotionCondition.java
+entity/promotion/promotion_condition/ConditionSpec.java
+entity/promotion/promotion_condition/LogicalOperator.java
+entity/promotion/Promotion.java
+entity/user/Role.java
+entity/user/User.java
+enums/house/HouseStatus.java
+enums/house/HouseType.java
+exception/UserExistsException.java
+factory/HouseFilterFactory.java
+mapper/helper/UrlBuilder.java
+mapper/HouseMapper.java
+mapper/HouseRequestMapper.java
+mapper/ImageMapper.java
+mapper/ProjectMapper.java
+mapper/PromotionMapper.java
+mapper/UserMapper.java
+model/filter/action/EntityFilter.java
+model/filter/action/house/AreaFilter.java
+model/filter/action/house/AreaSizeFilter.java
+model/filter/action/house/BedRoomFilter.java
+model/filter/action/house/HouseTypeFilter.java
+model/filter/action/house/OldNewFilter.java
+model/filter/action/house/PriceRangeFilter.java
+model/filter/action/house/SortByFilter.java
+model/filter/specification/DropdownFilterDTO.java
+model/filter/specification/DropdownFilterSpecification.java
+model/filter/specification/FilterSpecification.java
+model/filter/specification/IntegerNumberRangeDTO.java
+model/filter/specification/IntegerNumberRangeSpecification.java
+model/filter/specification/MultiSelectionDTO.java
+model/filter/specification/MultiSelectionFilterSpecification.java
+model/filter/specification/SingleSelectionFilterDTO.java
+model/filter/specification/SingleSelectionFilterSpecification.java
+model/filter/specification/SpecificationDataDTO.java
+ProjectSeApplication.java
+repository/CompositeConditionRepository.java
+repository/HouseRegisterRepository.java
+repository/HouseRenovateRepository.java
+repository/HouseRentalRepository.java
+repository/HouseRepository.java
+repository/HouseRequestRepository.java
+repository/ImageRepository.java
+repository/ProjectRepository.java
+repository/promotion/FixedAmountDiscountActionRepository.java
+repository/promotion/GiftActionRepository.java
+repository/promotion/PercentageDiscountActionRepository.java
+repository/PromotionRepository.java
+repository/UserRepository.java
+security/JwtAuthenticationFilter.java
+security/JWTConfig.java
+security/SecurityConfig.java
+service/ActionResolverService.java
+service/AuthService.java
+service/HouseCommandService.java
+service/HouseRegisterService.java
+service/HouseRequestService.java
+service/HouseService.java
+service/ImageService.java
+service/JWTService.java
+service/ProjectCommand.java
+service/ProjectService.java
+service/PromotionService.java
+service/S3/S3PresignService.java
+service/S3/S3StorageService.java
+service/SpecificationComposer.java
+service/UserService.java
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="config/AppConfig.java">
+package ku.cs.project_SE.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+@Configuration
+public class AppConfig {
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+}
+</file>
+
+<file path="config/AWSConfig.java">
+// new
+package ku.cs.project_SE.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider;
+import software.amazon.awssdk.regions.Region;
+import software.amazon.awssdk.services.s3.S3Client;
+import software.amazon.awssdk.services.s3.S3Client;
+import software.amazon.awssdk.services.s3.presigner.S3Presigner;
+
+@Configuration
+public class AWSConfig {
+    @Bean
+    public S3Client s3Client(@Value("${app.aws.region}") String region) {
+        return S3Client.builder()
+                .region(Region.of(region))
+                .credentialsProvider(DefaultCredentialsProvider.create())
+                .build();
+    }
+
+    @Bean
+    public S3Presigner s3Presigner(@Value("${app.aws.region}") String region) {
+        return S3Presigner.builder()
+                .region(Region.of(region))
+                .credentialsProvider(DefaultCredentialsProvider.create())
+                .build();
+    }
+}
+</file>
+
+<file path="controller/AdminHouseRegisterController.java">
+package ku.cs.project_SE.controller;
+
+import ku.cs.project_SE.dto.house_register.HouseRegisterRequestDto;
+import ku.cs.project_SE.dto.house_register.HouseRegisterRespondDto;
+import ku.cs.project_SE.entity.house_register.HouseRegister;
+import ku.cs.project_SE.entity.user.User;
+import ku.cs.project_SE.service.HouseRegisterService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.UUID;
+
+@RestController
+@RequestMapping("/admin")
+public class AdminHouseRegisterController {
+    private HouseRegisterService houseRegisterService;
+
+    AdminHouseRegisterController(HouseRegisterService houseRegisterService) {
+        this.houseRegisterService = houseRegisterService;
+
+    }
+
+    @GetMapping("/house-register/get")
+    public ResponseEntity<HouseRegisterRespondDto> getHouseRegister(@AuthenticationPrincipal User user, @RequestParam long houseId) {
+        HouseRegisterRespondDto houseRegisterRespondDto = houseRegisterService.getHouseRegisterDtoById(user.getUserId(),houseId);
+        return ResponseEntity.ok(houseRegisterRespondDto);
+    }
+
+    @GetMapping("/house-register")
+    public ResponseEntity<List<HouseRegisterRespondDto>> getAllHouseRegister() {
+        return ResponseEntity.ok(houseRegisterService.getAllHouseRegisterDto());
+    }
+}
+</file>
+
+<file path="controller/AnalyticController.java">
+package ku.cs.project_SE.controller;
+
+
+import ku.cs.project_SE.dto.analytic.AnalyticResponseDTO;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/analytic")
+public class AnalyticController {
+
+    @GetMapping("/event")
+    @ResponseBody
+    public AnalyticResponseDTO addEvent(@RequestParam(required = true) String eventName, @RequestParam(required = true) String eventText){
+        return new AnalyticResponseDTO(true);
+    }
+}
+</file>
+
+<file path="controller/AuthController.java">
+package ku.cs.project_SE.controller;
+
+import ku.cs.project_SE.dto.auth.LoginRequestDto;
+import ku.cs.project_SE.dto.auth.LoginResponse;
+import ku.cs.project_SE.dto.auth.RegisterRequestDto;
+import ku.cs.project_SE.dto.auth.RegisterResponse;
+import ku.cs.project_SE.entity.user.User;
+import ku.cs.project_SE.exception.UserExistsException;
+import ku.cs.project_SE.service.AuthService;
+import ku.cs.project_SE.service.JWTService;
+import ku.cs.project_SE.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
+import java.util.Optional;
+
+//Tee
+@RestController
+@RequestMapping("/auth")
+
+public class AuthController {
+
+    private final JWTService jwtService;
+    private final UserService userService;
+    private final AuthService authService;
+
+    @Autowired
+    public AuthController(JWTService jwtService, UserService userService,AuthService authService) {
+        this.jwtService = jwtService;
+        this.userService = userService;
+        this.authService = authService;
+    }
+
+
+    @PostMapping(value = "/signup")
+    public ResponseEntity<RegisterResponse> createUser(@RequestBody RegisterRequestDto dto){
+        try{
+            User user = userService.createUser(dto);
+            String token = jwtService.generateToken(user);
+            return ResponseEntity.ok(new RegisterResponse(true,"Register Successfully",token));
+        }catch (UserExistsException e){
+            return ResponseEntity.status(HttpStatus.CONFLICT)
+                    .body(new RegisterResponse(false, e.getMessage(), null));
+        }
+        catch (Exception e){
+            return ResponseEntity
+                    .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(new RegisterResponse(false, "Something went wrong", null));
+        }
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<LoginResponse> login(@RequestBody LoginRequestDto request) {
+        try {
+            String token = authService.login(request);
+
+            return ResponseEntity.ok(new LoginResponse(true,"Login Successfully",token));
+        }catch (AuthenticationException e){
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body(new LoginResponse(false, "Invalid credentials", ""));
+        }
+        catch (Exception e){
+            return ResponseEntity.badRequest().build();
+        }
+
+    }
+
+
+}
+</file>
+
+<file path="controller/BannerController.java">
+package ku.cs.project_SE.controller;
+
+
+import ku.cs.project_SE.dto.banner.*;
+import org.springframework.http.RequestEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/banner")
+public class BannerController {
+
+    @GetMapping("/banners")
+    @ResponseBody
+    public List<BannerDTO> getBanners(){
+
+        return List.of(
+                new BannerDTO("samplePopup","p1", "p2", "greater good", 0)
+        );
+    }
+
+    @PostMapping("/{bannerName}/delete")
+    @ResponseBody
+    public BannerDeleteResultDTO deleteBanner(@PathVariable String bannerName){
+        return new BannerDeleteResultDTO(bannerName,true);
+    }
+
+    @PostMapping("/{bannerName}/edit")
+    @ResponseBody
+    public BannerEditResultDTO editBanner(@PathVariable String bannerName, BannerEditRequestDTO bannerEditRequestDTO){
+        return new BannerEditResultDTO(bannerName,true);
+    }
+
+    @PostMapping("/create")
+    @ResponseBody
+    public BannerCreateResultDTO createBanner(BannerCreateRequestDTO bannerCreateRequestDTO){
+        return new BannerCreateResultDTO(bannerCreateRequestDTO.bannerName(), true);
+    }
+}
+</file>
+
+<file path="controller/HouseAdminController.java">
+package ku.cs.project_SE.controller;
+
+import ku.cs.project_SE.dto.house.HouseCreateAdminDto;
+import ku.cs.project_SE.dto.house.HouseEditAdminRequestDto;
+import ku.cs.project_SE.dto.house.RenovateDto;
+import ku.cs.project_SE.dto.house.RentalDto;
+import ku.cs.project_SE.entity.user.User;
+import ku.cs.project_SE.service.HouseCommandService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.*;
+
+//Tee
+@RestController
+@RequestMapping("/admin/houses")
+public class HouseAdminController {
+
+
+    private final HouseCommandService houseCommandService;
+
+    public HouseAdminController(HouseCommandService houseService) {
+        this.houseCommandService = houseService;
+    }
+
+
+    @PostMapping("/create")
+    public ResponseEntity<String> createHouse(@RequestBody HouseCreateAdminDto houseCreateDto, @AuthenticationPrincipal User user) {
+        try {
+            System.out.println("createHouse");
+            houseCommandService.createHouseFromAdmin(houseCreateDto,user);
+            return ResponseEntity.ok("Success");
+        }
+        catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    @GetMapping("/{houseId}/delete")
+    public ResponseEntity<String> deleteHouse(@PathVariable("houseId") Long houseId){
+        try {
+            this.houseCommandService.deleteHouse(houseId);
+            return ResponseEntity.ok("Success");
+        }
+        catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    @PostMapping("/{houseId}/edit")
+    public ResponseEntity<String> createHouse(
+            @PathVariable Long houseId,
+            @RequestBody HouseEditAdminRequestDto request) {
+
+         try {
+             houseCommandService.editHouse(request,houseId);
+             return ResponseEntity.ok("Success");
+         }
+         catch (Exception e) {
+             return ResponseEntity.badRequest().body(e.getMessage());
+         }
+    }
+
+    @PostMapping("/{houseId}/update-rental-data")
+    public ResponseEntity<String> updateRentalData(
+            @PathVariable Long houseId,
+            @RequestBody RentalDto rental
+    ) {
+        try {
+            houseCommandService.updateRentalData(houseId, rental);
+            return ResponseEntity.ok("Success");
+        }
+        catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    @PostMapping("/{houseId}/update-renovate-data")
+    public ResponseEntity<String> updateRenovateData(
+            @PathVariable Long houseId,
+            @RequestBody RenovateDto renovate
+    ) {
+        try {
+            houseCommandService.updateRenovateData(houseId, renovate);
+            return ResponseEntity.ok("Success");
+        }
+        catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    @PostMapping("/houses-sell-management")
+    public ResponseEntity<String> approve(){
+        return ResponseEntity.ok("Success");
+    }
+
+    @GetMapping("/houses-sell-management")
+    public ResponseEntity<String> getHouseRequest(){
+        return ResponseEntity.ok("Success");
+    }
+}
+</file>
+
+<file path="controller/HouseController.java">
+// keam
+package ku.cs.project_SE.controller;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import ku.cs.project_SE.dto.FilterDTO;
+import ku.cs.project_SE.dto.PageResponseDto;
+import ku.cs.project_SE.dto.house.HouseDetailDto;
+import ku.cs.project_SE.dto.house.HouseSearchFilterRequestDto;
+import ku.cs.project_SE.dto.house.HouseSearchRequestDto;
+import ku.cs.project_SE.service.HouseService;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+
+@RestController
+@RequestMapping("/houses")
+public class HouseController {
+
+    private final HouseService houseService;
+    private final ObjectMapper objectMapper;
+
+    public HouseController(HouseService houseService, ObjectMapper objectMapper) {
+        this.houseService = houseService;
+        this.objectMapper = objectMapper;
+    }
+
+    @GetMapping
+    public PageResponseDto<HouseDetailDto> listHouses(
+            @RequestParam(required = false) String query,
+            @RequestParam(defaultValue = "1") int page,
+            @RequestParam(defaultValue = "6") int pageSize,
+            @RequestParam(required = false) String filters
+    ) {
+        HouseSearchFilterRequestDto filterRequest = null;
+
+        if (filters != null && !filters.isBlank()) {
+            try {
+                filterRequest = objectMapper.readValue(filters, HouseSearchFilterRequestDto.class);
+            } catch (JsonProcessingException e) {
+                throw new ResponseStatusException(
+                        HttpStatus.BAD_REQUEST,
+                        "Invalid filters JSON format: " + e.getMessage()
+                );
+            }
+        }
+
+        return houseService.searchHouses(query, page, pageSize, filterRequest);
+    }
+
+    @GetMapping("/filter/specification")
+    public FilterDTO getHouseFilterSpecification(){
+        return houseService.getHouseFilterSpecifications();
+    }
+
+    @PostMapping("/search")
+    public PageResponseDto<HouseDetailDto> searchHouses(@RequestBody HouseSearchRequestDto searchRequest) {
+        Integer page = searchRequest.getPage() != null ? searchRequest.getPage() : 1;
+        Integer pageSize = searchRequest.getPageSize() != null ? searchRequest.getPageSize() : 6;
+
+        return houseService.searchHouses(
+                searchRequest.getQuery(),
+                page,
+                pageSize,
+                searchRequest.getFilterRequest()
+        );
+    }
+
+    @GetMapping("/{id}")
+    public HouseDetailDto getHouse(@PathVariable("id") Long id) {
+        return houseService.getHouseById(id);
+    }
+}
+</file>
+
+<file path="controller/HouseRegistrationController.java">
+package ku.cs.project_SE.controller;
+
+import ku.cs.project_SE.dto.house.HouseDetailDto;
+import ku.cs.project_SE.dto.house_register.HouseRegisterRequestDto;
+import ku.cs.project_SE.dto.house_register.HouseRegisterRespondDto;
+import ku.cs.project_SE.dto.user.UserRequestDto;
+import ku.cs.project_SE.dto.user.UserRespondDto;
+import ku.cs.project_SE.entity.house_register.HouseRegister;
+import ku.cs.project_SE.entity.house_register.HouseRegisterId;
+import ku.cs.project_SE.entity.user.User;
+import ku.cs.project_SE.mapper.HouseMapper;
+import ku.cs.project_SE.mapper.UserMapper;
+import ku.cs.project_SE.service.HouseRegisterService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.UUID;
+
+//Tee
+@RestController
+@RequestMapping("/house-visit")
+public class HouseRegistrationController {
+
+    private HouseRegisterService houseRegisterService;
+
+    HouseRegistrationController(HouseRegisterService houseRegisterService) {
+        this.houseRegisterService = houseRegisterService;
+
+    }
+
+    @PostMapping("/register")
+    public ResponseEntity<String> houseRegister(@RequestBody HouseRegisterRequestDto houseRegisterDto, @AuthenticationPrincipal User user) {
+        HouseRegister houseRegister = houseRegisterService.createHouseRegister(houseRegisterDto.houseId(),user.getUserId());
+        return ResponseEntity.ok("Success");
+    }
+
+
+}
+</file>
+
+<file path="controller/HouseRequestManagementController.java">
+package ku.cs.project_SE.controller;
+
+import ku.cs.project_SE.dto.admin.ApproveHouseRequestDto;
+import ku.cs.project_SE.dto.admin.RejectHouseRequestDto;
+import ku.cs.project_SE.dto.house.HouseCreateInvestorDto;
+import ku.cs.project_SE.dto.house.HouseRequestDto;
+import ku.cs.project_SE.dto.house_register.HouseRegisterRequestDto;
+import ku.cs.project_SE.entity.house_register.HouseRegister;
+import ku.cs.project_SE.entity.user.User;
+import ku.cs.project_SE.service.HouseRequestService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+//Tee
+@RestController
+@RequestMapping("/admin")
+public class HouseRequestManagementController {
+
+    HouseRequestService houseRequestService;
+
+    public HouseRequestManagementController(HouseRequestService houseRequestService) {
+        this.houseRequestService = houseRequestService;
+    }
+
+
+    @GetMapping("/house-request")
+    public ResponseEntity<?> getHouseRequests() {
+        List<HouseRequestDto> houseRequestDtoList = houseRequestService.getPendingAndModifiedRequests();
+        return ResponseEntity.ok(houseRequestDtoList);
+    }
+
+    @GetMapping("/house-request/history")
+    public ResponseEntity<?> getHouseRequestsHistory() {
+        List<HouseRequestDto> houseRequestDtoList = houseRequestService.getApprovedOrRejectedRequest();
+        return ResponseEntity.ok(houseRequestDtoList);
+    }
+
+    @PostMapping("/house-request/approve")
+    public ResponseEntity<String> approve(@RequestBody ApproveDto dto, @AuthenticationPrincipal User user) {
+        houseRequestService.approve(dto,user);
+        return ResponseEntity.ok("ok");
+    }
+
+    @PostMapping("/house-request/reject")
+    public ResponseEntity<String> reject(@RequestBody RejectDto dto, @AuthenticationPrincipal User user) {
+        houseRequestService.reject(dto,user);
+        return ResponseEntity.ok("ok");
+    }
+
+    
+
+}
+</file>
+
+<file path="controller/ImageController.java">
+// keam
+package ku.cs.project_SE.controller;
+
+import ku.cs.project_SE.dto.image.ImageDto;
+import ku.cs.project_SE.entity.image.Image;
+import ku.cs.project_SE.service.ImageService;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
+import org.springframework.http.*;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.net.MalformedURLException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Arrays;
+
+@RestController
+@RequestMapping("/images")
+public class ImageController {
+
+    private final ImageService service;
+
+    public ImageController(ImageService service) {
+        this.service = service;
+    }
+
+    @PostMapping(path = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<ImageDto> upload(@RequestPart("file") MultipartFile file) {
+        System.out.println("Received file: " + file.getOriginalFilename());
+        ImageDto dto = service.upload(file);
+        return ResponseEntity.status(HttpStatus.CREATED).body(dto);
+    }
+
+    @PostMapping(path = "/uploads", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<ImageDto[]> uploadMany(@RequestPart("files") MultipartFile[] files) {
+        ImageDto[] result = Arrays.stream(files)
+                .map(service::upload)
+                .toArray(ImageDto[]::new);
+        return ResponseEntity.status(HttpStatus.CREATED).body(result);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Void> showImage(@PathVariable Long id) {
+        var dto = service.getImage(id);
+        return ResponseEntity.status(HttpStatus.FOUND) // 302
+                .header(HttpHeaders.LOCATION, dto.getUrl())
+                .build();
+    }
+
+    @GetMapping("/{id}/meta")
+    public ResponseEntity<ImageDto> getImageMeta(@PathVariable("id") Long id) {
+        return ResponseEntity.ok(service.getImage(id));
+    }
+
+}
+</file>
+
+<file path="controller/InvestorController.java">
+package ku.cs.project_SE.controller;
+
+
+import ku.cs.project_SE.dto.house.HouseCreateAdminDto;
+import ku.cs.project_SE.dto.house.HouseCreateInvestorDto;
+import ku.cs.project_SE.dto.house.HouseRequestDto;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.entity.user.User;
+import ku.cs.project_SE.service.HouseCommandService;
+import ku.cs.project_SE.service.HouseRequestService;
+import ku.cs.project_SE.service.HouseService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+//Tee
+@RestController
+@RequestMapping("/investor")
+public class InvestorController {
+    private HouseService houseService;
+    private HouseCommandService houseCommandService;
+    private HouseRequestService houseRequestService;
+
+    public InvestorController(HouseService houseService,HouseCommandService houseCommandService,HouseRequestService houseRequestService) {
+        this.houseService = houseService;
+        this.houseCommandService = houseCommandService;
+        this.houseRequestService = houseRequestService;
+    }
+
+
+    @PostMapping("/sell-house-propose")
+    public ResponseEntity<String> create(@RequestBody HouseCreateInvestorDto dto, @AuthenticationPrincipal User user) {
+        try {
+            House house = houseCommandService.createHouseFromInvestor(dto,user);
+            houseRequestService.CreateHouseRequest(house,user);
+            return ResponseEntity.ok("Success");
+        }
+        catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    @GetMapping("/sell-house-management")
+    public ResponseEntity<?> getHouseRequest(@AuthenticationPrincipal User user) {
+        try {
+            List<HouseRequestDto> houseRequestDtos = houseRequestService.getHouseRequestByOwner(user.getUserId());
+            return ResponseEntity.ok(houseRequestDtos);
+        }
+        catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+}
+</file>
+
+<file path="controller/ProjectAdminController.java">
+// keam&tee
+package ku.cs.project_SE.controller;
+
+
+import ku.cs.project_SE.dto.project.ProjectCreateDto;
+import ku.cs.project_SE.dto.project.ProjectResponseDto;
+import ku.cs.project_SE.entity.image.Image;
+import ku.cs.project_SE.service.ProjectService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/admin/project")
+public class ProjectAdminController {
+
+    private final ProjectService service;
+
+    public ProjectAdminController(ProjectService service) {
+        this.service = service;
+    }
+
+    @PostMapping
+    public ResponseEntity<ProjectResponseDto> create(@RequestBody ProjectCreateDto dto) {
+        Image image = null;
+        if (dto.getImageId() != null) {
+            image = new Image();
+            image.setImageId(dto.getImageId());
+        }
+        return ResponseEntity.ok(service.create(dto, image));
+    }
+
+    @GetMapping("/delete/{projectName}")
+    public String deleteProject(@PathVariable String projectName) {
+        service.delete(projectName);
+        return "200";
+    }
+}
+</file>
+
+<file path="controller/ProjectController.java">
+// keam&tee
+package ku.cs.project_SE.controller;
+
+import ku.cs.project_SE.dto.project.ProjectResponseDto;
+import ku.cs.project_SE.service.ProjectService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/project")
+public class ProjectController {
+
+    private final ProjectService service;
+
+    public ProjectController(ProjectService service) {
+        this.service = service;
+    }
+
+    @GetMapping
+    public ResponseEntity<List<ProjectResponseDto>> getAll() {
+        return ResponseEntity.ok(service.getAll());
+    }
+}
+</file>
+
+<file path="controller/PromotionController.java">
+package ku.cs.project_SE.controller;
+
+import jakarta.validation.Valid;
+import ku.cs.project_SE.dto.PageResponseDto;
+import ku.cs.project_SE.dto.promotion.CreatePromotionDto;
+import ku.cs.project_SE.dto.promotion.PromotionResponseDto;
+import ku.cs.project_SE.dto.promotion.UpdatePromotionDto;
+import ku.cs.project_SE.dto.promotion.action.SetActionRequest;
+import ku.cs.project_SE.dto.promotion.condition.AddCompositeConditionRequest;
+import ku.cs.project_SE.service.PromotionService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/promotions")
+public class PromotionController {
+
+    private final PromotionService service;
+
+    public PromotionController(PromotionService service) {
+        this.service = service;
+    }
+
+    @GetMapping
+    public ResponseEntity<PageResponseDto<PromotionResponseDto>> list(
+            @RequestParam(required = false) String query,
+            @RequestParam(required = false) String filter,
+            @RequestParam(defaultValue = "1") int page,
+            @RequestParam(defaultValue = "6") int pageSize
+    ) {
+        return ResponseEntity.ok(service.search(query, filter, page, pageSize));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<PromotionResponseDto> get(@PathVariable String id) {
+        var dto = service.getById(id);
+        if (dto == null) return ResponseEntity.notFound().build();
+        return ResponseEntity.ok(dto);
+    }
+
+    @PostMapping("/create")
+    public ResponseEntity<PromotionResponseDto> create(@Valid @RequestBody CreatePromotionDto req) {
+        return ResponseEntity.ok(service.create(req));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<PromotionResponseDto> update(
+            @PathVariable String id,
+            @Valid @RequestBody UpdatePromotionDto req
+    ) {
+        return ResponseEntity.ok(service.update(id, req));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable String id) {
+        service.delete(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/{id}/add-conditions")
+    public ResponseEntity<Long> addCondition(
+            @PathVariable String id,
+            @RequestBody AddCompositeConditionRequest req
+    ) {
+        return ResponseEntity.ok(service.addCompositeCondition(id, req));
+    }
+
+    @GetMapping("/{id}/check")
+    public ResponseEntity<Boolean> check(
+            @PathVariable String id,
+            @RequestParam("houseId") Long houseId
+    ) {
+        return ResponseEntity.ok(service.check(id, houseId));
+    }
+
+    @PostMapping("/{id}/action")
+    public ResponseEntity<Void> setAction(@PathVariable String id, @RequestBody SetActionRequest req) {
+        service.setAction(id, req);
+        return ResponseEntity.ok().build();
+    }
+}
+</file>
+
+<file path="controller/TestAuth.java">
+package ku.cs.project_SE.controller;
+
+
+import ku.cs.project_SE.dto.auth.RegisterRequestDto;
+import ku.cs.project_SE.entity.user.User;
+import ku.cs.project_SE.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/test")
+public class TestAuth {
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @GetMapping("/accessible")
+    public String test() {
+        return "Accessible";
+    }
+
+    @GetMapping("/unaccessible")
+    public ResponseEntity<RegisterRequestDto> test2(@AuthenticationPrincipal User user) {
+        System.out.println("XXXXXX"+user.getEmail());
+        System.out.println("asdasd"+user.getRole());
+        RegisterRequestDto responseDto = new RegisterRequestDto(
+                user.getEmail(),
+                user.getPhoneNumber(), // สมมติว่าคลาส User ของคุณมีเมธอด getPhoneNumber()
+                user.getFirstName(),   // สมมติว่าคลาส User ของคุณมีเมธอด getFirstName()
+                user.getLastName(),    // สมมติว่าคลาส User ของคุณมีเมธอด getLastName()
+                null,
+                null  // ***ข้อควรระวัง: ห้ามส่งรหัสผ่านกลับไปใน Response เด็ดขาด***
+        );
+
+        // 2. ส่ง DTO ที่สร้างขึ้นใหม่กลับไปใน Response Body
+        return ResponseEntity.ok(responseDto);
+    }
+}
+</file>
+
+<file path="controller/TestController.java">
+package ku.cs.project_SE.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@RestController
+public class TestController {
+    @GetMapping("/test")
+    public String test() {
+        return "TEST API";
+    }
+    
+}
+</file>
+
+<file path="controller/TestRoleGuard.java">
+package ku.cs.project_SE.controller;
+
+
+import ku.cs.project_SE.dto.auth.RegisterRequestDto;
+import ku.cs.project_SE.entity.user.User;
+import ku.cs.project_SE.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/admin")
+public class TestRoleGuard {
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @GetMapping("/unaccessible")
+    public ResponseEntity<RegisterRequestDto> test2(@AuthenticationPrincipal User user) {
+        System.out.println(user.getEmail());
+        RegisterRequestDto responseDto = new RegisterRequestDto(
+                user.getEmail(),
+                user.getPhoneNumber(), // สมมติว่าคลาส User ของคุณมีเมธอด getPhoneNumber()
+                user.getFirstName(),   // สมมติว่าคลาส User ของคุณมีเมธอด getFirstName()
+                user.getLastName(),    // สมมติว่าคลาส User ของคุณมีเมธอด getLastName()
+                null,
+
+                null  // ***ข้อควรระวัง: ห้ามส่งรหัสผ่านกลับไปใน Response เด็ดขาด***
+        );
+
+        // 2. ส่ง DTO ที่สร้างขึ้นใหม่กลับไปใน Response Body
+        return ResponseEntity.ok(responseDto);
+    }
+}
+</file>
+
+<file path="controller/UserController.java">
+package ku.cs.project_SE.controller;
+
+import ku.cs.project_SE.dto.user.UserRequestDto;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.UUID;
+
+@RestController
+@RequestMapping("/api/user")
+public class UserController {
+
+    private UserRequestDto dummy(UUID id) {
+        UserRequestDto d = new UserRequestDto();
+        d.setId(id);
+        d.setFirst("DUMMY_FNAME");
+        d.setLastname("DUMMY_LNAME");
+        d.setEmail("DUMMY_EMAIL");
+        d.setPassword("DUMMY_PASSWORD");
+        return d;
+    }
+
+    @GetMapping("/token/view")
+    public ResponseEntity<UserRequestDto> getUserByToken(@RequestBody String token) {
+        if (token == null || token.trim().isEmpty()) return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        try {
+            UUID uuid = UUID.randomUUID();
+            UserRequestDto u = dummy(uuid);
+            return new ResponseEntity<>(u, HttpStatus.OK);
+        } catch (IllegalArgumentException e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+    @GetMapping("/view")
+    public ResponseEntity<UserRequestDto> getUserById(@RequestBody String id) {
+        if (id == null || id.trim().isEmpty()) return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        try {
+            UUID uuid = UUID.fromString(id);
+            UserRequestDto u = dummy(uuid);
+            return new ResponseEntity<>(u, HttpStatus.OK);
+        } catch (IllegalArgumentException e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PostMapping("/edit")
+    public ResponseEntity<String> editUser(@RequestBody UserRequestDto userDTO) {
+        if(userDTO.getId()==null) return  new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        return  new ResponseEntity<>("Edit Sucuessfully", HttpStatus.OK);
+    }
+}
+</file>
+
+<file path="dto/admin/ApproveDto.java">
+package ku.cs.project_SE.dto.admin;
+
+import java.util.UUID;
+
+public record ApproveDto(
+        UUID requestId
+) {
+
+}
+</file>
+
+<file path="dto/admin/RejectDto.java">
+package ku.cs.project_SE.dto.admin;
+
+import java.util.UUID;
+
+public record RejectDto(
+        UUID requestId,
+        String adminComment
+) {
+}
+</file>
+
+<file path="dto/analytic/AnalyticResponseDTO.java">
+package ku.cs.project_SE.dto.analytic;
+
+public record AnalyticResponseDTO (
+    boolean isOk
+) {}
+</file>
+
+<file path="dto/auth/LoginRequestDto.java">
+package ku.cs.project_SE.dto.auth;
+
+public record LoginRequestDto(
+        String identifier,
+        String password
+) {
+
+}
+</file>
+
+<file path="dto/auth/LoginResponse.java">
+package ku.cs.project_SE.dto.auth;
+
+import lombok.Data;
+
+@Data
+public class LoginResponse {
+    private boolean success;
+    private String status;
+    private String token;
+    public LoginResponse(){}
+    public LoginResponse(boolean success,String status,String token) {
+        this.success = success;
+        this.status = status;
+        this.token = token;
+    }
+
+}
+</file>
+
+<file path="dto/auth/RegisterRequestDto.java">
+package ku.cs.project_SE.dto.auth;
+
+public record RegisterRequestDto(
+        String email,
+        String phoneNumber,
+        String firstName,
+        String lastName,
+        String password,
+        String confirmPassword
+) {
+}
+</file>
+
+<file path="dto/auth/RegisterResponse.java">
+package ku.cs.project_SE.dto.auth;
+
+import lombok.Data;
+
+@Data
+public class RegisterResponse {
+    private boolean success;
+    private String status;
+    private String token;
+
+    public RegisterResponse(boolean success, String status,String token){
+        this.success = success;
+        this.status = status;
+        this.token = token;
+    }
+}
+</file>
+
+<file path="dto/banner/BannerCreateRequestDTO.java">
+package ku.cs.project_SE.dto.banner;
+
+
+public record BannerCreateRequestDTO (
+    String bannerName,
+    String outsideImage,
+    String insideImage,
+    String bannerContent,
+    int bannerOrder
+) {}
+</file>
+
+<file path="dto/banner/BannerCreateResultDTO.java">
+package ku.cs.project_SE.dto.banner;
+
+
+public record BannerCreateResultDTO (
+    String bannerName,
+    boolean successFullyEdited
+) {}
+</file>
+
+<file path="dto/banner/BannerDeleteResultDTO.java">
+package ku.cs.project_SE.dto.banner;
+
+
+public record BannerDeleteResultDTO (
+    String bannerName,
+    boolean successFullyDeleted
+) {}
+</file>
+
+<file path="dto/banner/BannerDTO.java">
+package ku.cs.project_SE.dto.banner;
+
+
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NonNull;
+
+public record BannerDTO (
+    String popupName,
+    String outsideImage,
+    String insideImage,
+    String bannerContent,
+    Integer bannerOrder
+) {}
+</file>
+
+<file path="dto/banner/BannerEditRequestDTO.java">
+package ku.cs.project_SE.dto.banner;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+
+public record BannerEditRequestDTO (
+    String outsideImage,
+    String insideImage,
+    String popupContent,
+    int bannerOrder
+) {}
+</file>
+
+<file path="dto/banner/BannerEditResultDTO.java">
+package ku.cs.project_SE.dto.banner;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+
+public record BannerEditResultDTO (
+    String bannerName,
+    boolean successFullyEdited
+){}
+</file>
+
+<file path="dto/FilterDTO.java">
+package ku.cs.project_SE.dto;
+
+import java.util.List;
+import java.util.Map;
+
+public record FilterDTO (
+    int filterCount,
+    List<Map<String, Object>> filters
+) {}
+</file>
+
+<file path="dto/house_register/HouseRegisterRequestDto.java">
+package ku.cs.project_SE.dto.house_register;
+
+public record HouseRegisterRequestDto(
+        Long houseId
+
+) {
+}
+</file>
+
+<file path="dto/house_register/HouseRegisterRespondDto.java">
+package ku.cs.project_SE.dto.house_register;
+
+import ku.cs.project_SE.dto.house.HouseDetailDto;
+import ku.cs.project_SE.dto.user.UserRequestDto;
+import ku.cs.project_SE.dto.user.UserRespondDto;
+
+public record HouseRegisterRespondDto(
+        HouseDetailDto houseDetailDto, UserRespondDto userDTO) {
+}
+</file>
+
+<file path="dto/house_sell/SellRequestDto.java">
+package ku.cs.project_SE.dto.house_sell;
+
+public class SellRequestDto {
+}
+</file>
+
+<file path="dto/house/HouseCreateAdminDto.java">
+package ku.cs.project_SE.dto.house;
+
+import ku.cs.project_SE.entity.house.Address;
+import ku.cs.project_SE.enums.house.HouseType;
+import ku.cs.project_SE.enums.house.HouseStatus;
+
+import java.util.List;
+//Tee
+public record HouseCreateAdminDto(
+        String houseName,
+        HouseType houseType,
+        String price,
+        String houseDescription,
+        List<Long> imageId,
+        String projectName,
+        String caption,
+        Address address,
+        Integer bedrooms,
+        Integer bathrooms,
+        Double squareFootage,
+        Integer yearBuilt,
+        Integer garageSpaces,
+        String lawInformation,
+        HouseStatus houseStatus,
+        String structure
+) {}
+</file>
+
+<file path="dto/house/HouseCreateInvestorDto.java">
+package ku.cs.project_SE.dto.house;
+
+import ku.cs.project_SE.entity.house.Address;
+import ku.cs.project_SE.enums.house.HouseStatus;
+import ku.cs.project_SE.enums.house.HouseType;
+
+import java.util.List;
+
+public record HouseCreateInvestorDto(
+        String houseName,
+        HouseType houseType,
+        String price,
+        String houseDescription,
+        List<Long> imageId,
+        String purposedProjectName,
+        String caption,
+        Address address,
+        Integer bedrooms,
+        Integer bathrooms,
+        Double squareFootage,
+        Integer yearBuilt,
+        Integer garageSpaces,
+        String lawInformation,
+        String structure
+) {
+
+}
+</file>
+
+<file path="dto/house/HouseDetailDto.java">
+// keam
+package ku.cs.project_SE.dto.house;
+
+import ku.cs.project_SE.entity.house.Address;
+import ku.cs.project_SE.enums.house.HouseStatus;
+
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.Map;
+
+public record HouseDetailDto(
+        Long houseId,
+        String houseName,
+        String houseType,
+        BigDecimal price,
+        String description,
+        List<Long> imageId,
+        RentalDto rental,
+        RenovateDto renovate,
+        String additionalData,
+        HouseStatus houseStatus,
+        Address address,
+        boolean registeredForVisit
+) {}
+</file>
+
+<file path="dto/house/HouseEditAdminRequestDto.java">
+package ku.cs.project_SE.dto.house;
+
+import java.util.List;
+
+import ku.cs.project_SE.entity.house.Address;
+import ku.cs.project_SE.enums.house.HouseStatus;
+
+//Tee
+public record HouseEditAdminRequestDto(
+        String houseName,
+        String project,
+        String caption,
+        String houseDescription,
+        Address address,
+        Double price,
+        Integer bedrooms,
+        Integer bathrooms,
+        Double squareFootage,
+        Integer yearBuilt,
+        Integer garageSpaces,
+        String houseType,
+        String lawInformation,
+        HouseStatus houseStatus,
+        String structure,
+        List<Long> imageId
+//      LocationDto location  // ถ้าต้องการ map location แยก
+) {}
+</file>
+
+<file path="dto/house/HouseEditInvestorDto.java">
+package ku.cs.project_SE.dto.house;
+
+public class HouseEditInvestorDto {
+}
+</file>
+
+<file path="dto/house/HouseRequestDto.java">
+package ku.cs.project_SE.dto.house;
+
+import ku.cs.project_SE.dto.user.UserDataDto;
+import ku.cs.project_SE.enums.house.HouseStatus;
+
+import java.time.LocalDateTime;
+import java.util.UUID;
+
+public record HouseRequestDto(
+        UUID requestId,
+        UserDataDto user,
+        HouseDetailDto house,
+        HouseStatus status,
+        LocalDateTime submittedAt,
+        LocalDateTime reviewedAt,
+        String adminComment
+) {
+}
+</file>
+
+<file path="dto/house/HouseSearchFilterRequestDto.java">
+package ku.cs.project_SE.dto.house;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class HouseSearchFilterRequestDto {
+    private List<FilterCriteriaDto> filters = new ArrayList<>();
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class FilterCriteriaDto {
+        private String filterName;
+        private Map<String, Object> filterData;
+    }
+}
+</file>
+
+<file path="dto/house/HouseSearchRequestDto.java">
+package ku.cs.project_SE.dto.house;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class HouseSearchRequestDto {
+    private String query;
+    private Integer page = 1;
+    private Integer pageSize = 6;
+    private HouseSearchFilterRequestDto filterRequest;
+}
+</file>
+
+<file path="dto/house/LocationDto.java">
+package ku.cs.project_SE.dto.house;
+
+public record LocationDto(
+        String address,
+        String province,
+        String district,
+        String subdistrict,
+        String postalCode,
+        Double lat,
+        Double lon
+
+) {
+}
+</file>
+
+<file path="dto/house/RenovateDto.java">
+// keam
+package ku.cs.project_SE.dto.house;
+
+import java.math.BigDecimal;
+
+public record RenovateDto(
+        BigDecimal innovateCost,
+        String lawInformation,
+        String structure,
+        String additionalData
+) {}
+</file>
+
+<file path="dto/house/RentalDto.java">
+// keam
+package ku.cs.project_SE.dto.house;
+
+import java.math.BigDecimal;
+import java.util.Map;
+
+public record RentalDto(
+        BigDecimal rentalYield,
+        BigDecimal propertyTax,
+        BigDecimal maintenanceCost,
+        String additionalData
+) {}
+</file>
+
+<file path="dto/image/CreateImageDto.java">
+// keam
+package ku.cs.project_SE.dto.image;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
+
+@Data
+public class CreateImageDto {
+    @NotBlank
+    private String path;
+}
+</file>
+
+<file path="dto/image/ImageDto.java">
+// keam
+package ku.cs.project_SE.dto.image;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class ImageDto {
+    private Long id;
+    private String path;
+    private String url;
+}
+</file>
+
+<file path="dto/investor/SellHouseRequestDto.java">
+package ku.cs.project_SE.dto.investor;
+
+import ku.cs.project_SE.dto.house.LocationDto;
+import ku.cs.project_SE.dto.image.ImageDto;
+import ku.cs.project_SE.enums.house.HouseType;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+public record SellHouseRequestDto(
+        HouseType houseType,
+        BigDecimal price,
+        String houseDescription,
+        List<ImageDto> images,
+        String projectName,
+        LocationDto locationDto
+) {
+}
+</file>
+
+<file path="dto/PageResponseDto.java">
+// keam
+package ku.cs.project_SE.dto;
+
+import java.util.List;
+
+public record PageResponseDto<T>(
+        List<T> items,
+        int page,
+        int pageSize,
+        long totalItems,
+        int totalPages
+) {
+    public static <T> PageResponseDto<T> of(List<T> items, int page, int pageSize, long totalItems) {
+        int totalPages = (int) Math.ceil(totalItems / (double) pageSize);
+        return new PageResponseDto<>(items, page, pageSize, totalItems, totalPages);
+    }
+}
+</file>
+
+<file path="dto/project/ProjectCreateDto.java">
+// keam&tee
+package ku.cs.project_SE.dto.project;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
+
+@Data
+public class ProjectCreateDto {
+    @NotBlank
+    private String projectName;
+
+    private String projectDescription;
+
+    private Long imageId;
+}
+</file>
+
+<file path="dto/project/ProjectResponseDto.java">
+// keam&tee
+package ku.cs.project_SE.dto.project;
+
+public record ProjectResponseDto (
+    String projectName,
+    String projectDescription,
+    Long imageId,
+    String imageUrl
+) {}
+</file>
+
+<file path="dto/promotion/action/SetActionRequest.java">
+package ku.cs.project_SE.dto.promotion.action;
+
+import java.util.Map;
+
+public record SetActionRequest(
+        String type,
+        Map<String, Object> params
+) {}
+</file>
+
+<file path="dto/promotion/condition/AddCompositeConditionRequest.java">
+package ku.cs.project_SE.dto.promotion.condition;
+
+import ku.cs.project_SE.entity.promotion.promotion_condition.LogicalOperator;
+
+import java.util.List;
+
+public record AddCompositeConditionRequest(
+        LogicalOperator operator,
+        List<ConditionSpecDto> conditions
+) {}
+</file>
+
+<file path="dto/promotion/condition/ConditionSpecDto.java">
+package ku.cs.project_SE.dto.promotion.condition;
+
+import java.util.Map;
+
+public record ConditionSpecDto(
+        String type,
+        Map<String, Object> params
+) {}
+</file>
+
+<file path="dto/promotion/CreatePromotionDto.java">
+// keam
+package ku.cs.project_SE.dto.promotion;
+
+import jakarta.validation.constraints.*;
+import lombok.Data;
+
+@Data
+public class CreatePromotionDto {
+
+    @NotBlank
+    @Size(max = 100)
+    private String promotionName;
+
+    @NotBlank
+    @Size(max = 1000)
+    private String description;
+
+    @NotNull
+    private Boolean isActive;
+
+    @NotNull
+    @Min(0)
+    private Integer usageLimit;
+
+    @NotNull
+    @Min(0)
+    private Integer usedCount;
+}
+</file>
+
+<file path="dto/promotion/PromotionResponseDto.java">
+// keam
+package ku.cs.project_SE.dto.promotion;
+
+import java.time.Instant;
+
+public record PromotionResponseDto(
+        String promotionId,
+        String promotionName,
+        String description,
+        boolean isActive,
+        Integer usageLimit,
+        Integer usedCount,
+        Instant createdAt,
+        Instant updatedAt
+) {}
+</file>
+
+<file path="dto/promotion/UpdatePromotionDto.java">
+// keam
+package ku.cs.project_SE.dto.promotion;
+
+import jakarta.validation.constraints.*;
+import lombok.Data;
+
+@Data
+public class UpdatePromotionDto {
+
+    @NotBlank
+    @Size(max = 100)
+    private String promotionName;
+
+    @NotBlank
+    @Size(max = 1000)
+    private String description;
+
+    @NotNull
+    private Boolean isActive;
+
+    @NotNull
+    @Min(0)
+    private Integer usageLimit;
+
+    @NotNull
+    @Min(0)
+    private Integer usedCount;
+}
+</file>
+
+<file path="dto/user/UserDataDto.java">
+package ku.cs.project_SE.dto.user;
+
+public record UserDataDto(
+        String firstName,
+        String lastName,
+        String email,
+        String phoneNumber
+) {
+}
+</file>
+
+<file path="dto/user/UserRequestDto.java">
+package ku.cs.project_SE.dto.user;
+
+import lombok.Data;
+
+import java.util.UUID;
+
+@Data
+public class UserRequestDto {
+    private UUID id;
+    private String first;
+    private String lastname;
+    private String phone;
+    private String email;
+    private String password;
+    private String role;
+}
+</file>
+
+<file path="dto/user/UserRespondDto.java">
+package ku.cs.project_SE.dto.user;
+
+import ku.cs.project_SE.entity.user.Role;
+
+public record UserRespondDto(
+        String firstName,
+        String lastName,
+        String email,
+        String phoneNumber,
+        Role role
+
+) {
+
+}
+</file>
+
+<file path="entity/house_register/HouseRegister.java">
+package ku.cs.project_SE.entity.house_register;
+
+import jakarta.persistence.*;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.entity.user.User;
+import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.LocalDateTime;
+import java.util.Date;
+
+//Tee
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+public class HouseRegister {
+
+    @EmbeddedId
+    private HouseRegisterId id;
+
+    @ManyToOne
+    @MapsId("userId") // map ไปยัง username ใน HouseRegisterId
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @ManyToOne
+    @MapsId("houseId") // map ไปยัง houseId ใน HouseRegisterId
+    @JoinColumn(name = "house_id")
+    private House house;
+
+    @Column(name = "date")
+    @CreationTimestamp
+    private LocalDateTime date;
+
+
+}
+</file>
+
+<file path="entity/house_register/HouseRegisterId.java">
+package ku.cs.project_SE.entity.house_register;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.UUID;
+
+//Tee
+@Embeddable
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class HouseRegisterId implements java.io.Serializable {
+    @Column(name = "user_id", columnDefinition = "UUID")
+    private UUID userId;
+
+    @Column(name = "house_id")
+    private long houseId;
+}
+</file>
+
+<file path="entity/house_register/HouseVisitRegistration.java">
+package ku.cs.project_SE.entity.house_register;
+
+public class HouseVisitRegistration {
+}
+</file>
+
+<file path="entity/house/Address.java">
+package ku.cs.project_SE.entity.house;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "address")
+public class Address {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "postal_code")
+    private String postalCode;
+
+    @Column(name = "house_address")
+    private String houseAddress;
+
+    @Column(name = "area")
+    private String area;
+
+    @Column(name = "substrict")
+    private String substrict;
+
+    @Column(name = "province")
+    private String province;
+
+    @Column(name = "latitude")
+    private double lat;
+
+    @Column(name = "longitude")
+    private double lon;
+
+
+    public Address() {
+        this("", "", "", "", "", 0, 0);
+    }
+
+    public Address(String houseAddress, String area, String substrict, String postalCode) {
+        this(houseAddress, area, substrict, postalCode, "", 0, 0);
+    }
+
+    public Address(String houseAddress, String area, String substrict, String postalCode, String province, double lat, double lon) {
+        this.houseAddress = houseAddress;
+        this.area = area;
+        this.substrict = substrict;
+        this.postalCode = postalCode;
+        this.province = province;
+        this.lat = lat;
+        this.lon = lon;
+    }
+
+    // Getters and Setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public String getHouseAddress() {
+        return houseAddress;
+    }
+
+    public void setHouseAddress(String houseAddress) {
+        this.houseAddress = houseAddress;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
+    public String getSubstrict() {
+        return substrict;
+    }
+
+    public void setSubstrict(String substrict) {
+        this.substrict = substrict;
+    }
+
+    public String getProvince() {
+        return province;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
+    }
+
+    public double getLat() {
+        return lat;
+    }
+
+    public void setLat(double lat) {
+        this.lat = lat;
+    }
+
+    public double getLon() {
+        return lon;
+    }
+
+    public void setLon(double lon) {
+        this.lon = lon;
+    }
+}
+</file>
+
+<file path="entity/house/House.java">
+package ku.cs.project_SE.entity.house;
+
+import jakarta.persistence.*;
+import ku.cs.project_SE.entity.house_register.HouseRegister;
+import ku.cs.project_SE.entity.image.Image;
+import ku.cs.project_SE.entity.project.Project;
+import ku.cs.project_SE.entity.user.User;
+import ku.cs.project_SE.enums.house.HouseStatus;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
+
+import java.util.HashSet;
+import java.util.Set;
+
+@Entity
+@Table(name = "house")
+@Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@SuperBuilder
+@Inheritance(strategy = InheritanceType.JOINED)
+public class House {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long houseId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "project_name")
+    private Project project;
+
+    @Column(name = "house_name")
+    private String houseName;
+
+    @Column(name = "caption")
+    private String caption;
+
+
+    @Column(name = "proposed_projectname")
+    private String proposedProjectname;
+
+    @Column(name = "description", length = 2000)
+    private String description;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id")
+    private Address address;
+
+    @Column(name = "price")
+    private Double price;
+
+    @Column(name = "bedrooms")
+    private int bedrooms;
+
+    @Column(name = "bathrooms")
+    private int bathrooms;
+
+    @Column(name = "square_footage")
+    private double squareFootage;
+
+    @Column(name = "year_built")
+    private int yearBuilt;
+
+    @Column(name = "garage_spaces")
+    private int garageSpaces;
+
+    @Column(name = "house_type")
+    private String houseType;
+
+    @Column(name = "law_information", length = 2000)
+    private String lawInformation;
+
+    @Column(name = "structure", length = 1000)
+    private String structure;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "house_status")
+    private HouseStatus houseStatus;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "house_id")
+    private Set<Image> images = new HashSet<>();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "owner_id")  // foreign key ไปยัง User
+    private User owner;
+
+    @OneToMany(mappedBy = "house")
+    private Set<HouseRegister> houseRegisters = new HashSet<>();
+
+    @OneToOne(mappedBy = "house", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private HouseRental rental;
+
+    @OneToOne(mappedBy = "house", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private HouseRenovate renovate;
+}
+</file>
+
+<file path="entity/house/HouseRenovate.java">
+// keam
+package ku.cs.project_SE.entity.house;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.math.BigDecimal;
+
+@Entity
+@Table(name = "house_renovate")
+@Getter @Setter
+@NoArgsConstructor @AllArgsConstructor @Builder
+public class HouseRenovate {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "house_id", unique = true, nullable = false)
+    private House house;
+
+    @Column(name = "innovate_cost", precision = 12, scale = 2)
+    private BigDecimal innovateCost;
+
+    @Column(name = "law_information", length = 2000)
+    private String lawInformation;
+
+    @Column(name = "structure", length = 1000)
+    private String structure;
+
+    @Column(name = "additional_data", length = 2000)
+    private String additionalData;
+}
+</file>
+
+<file path="entity/house/HouseRental.java">
+// keam
+package ku.cs.project_SE.entity.house;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.math.BigDecimal;
+
+@Entity
+@Table(name = "house_rental")
+@Getter @Setter
+@NoArgsConstructor @AllArgsConstructor @Builder
+public class HouseRental {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "house_id", unique = true, nullable = false)
+    private House house;
+
+    @Column(name = "rental_yield", precision = 12, scale = 2)
+    private BigDecimal rentalYield;
+
+    @Column(name = "property_tax", precision = 12, scale = 2)
+    private BigDecimal propertyTax;
+
+    @Column(name = "maintenance_cost", precision = 12, scale = 2)
+    private BigDecimal maintenanceCost;
+
+    @Column(name = "additional_data", length = 2000)
+    private String additionalData;
+}
+</file>
+
+<file path="entity/house/HouseRequest.java">
+package ku.cs.project_SE.entity.house;
+
+import jakarta.persistence.*;
+import ku.cs.project_SE.entity.user.User;
+import ku.cs.project_SE.enums.house.HouseStatus;
+import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
+
+import java.time.LocalDateTime;
+import java.util.UUID;
+
+//Tee
+@Entity
+@Table(name = "house_request")
+@Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class HouseRequest {
+
+    @Id
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    private UUID requestId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "owner_id", nullable = false)
+    private User requester;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "house_id", nullable = false)
+    private House house;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status", nullable = false)
+    private HouseStatus status;
+
+    @Column(name = "submitted_at", nullable = false)
+    private LocalDateTime submittedAt;
+
+    @Column(name = "reviewed_at")
+    private LocalDateTime reviewedAt;
+
+    @Column(name = "admin_comment", length = 1000)
+    private String adminComment;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "approver")
+    private User approver;
+}
+</file>
+
+<file path="entity/image/Image.java">
+// keam
+package ku.cs.project_SE.entity.image;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+@Entity
+@Table(name = "image")
+@Getter @Setter
+@NoArgsConstructor @AllArgsConstructor
+public class Image {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "image_id")
+    private Long imageId;
+
+    @Column(name = "image_path", nullable = false, length = 500)
+    private String imagePath;
+}
+</file>
+
+<file path="entity/project/Project.java">
+// keam&tee
+package ku.cs.project_SE.entity.project;
+
+import jakarta.persistence.*;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.entity.image.Image;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.SuperBuilder;
+
+import java.util.HashSet;
+import java.util.Set;
+
+@Entity
+@Table(name = "project")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@SuperBuilder
+@Inheritance(strategy = InheritanceType.JOINED)
+
+public class Project {
+
+    @Id
+    @Column(name = "project_name")
+    private String projectName;
+
+    @Column(name = "project_description")
+    private String projectDescription;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "image_id")
+    private Image image;
+
+    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<House> houses = new HashSet<>();
+}
+</file>
+
+<file path="entity/promotion/promotion_action/ActionFactory.java">
+package ku.cs.project_SE.entity.promotion.promotion_action;
+
+import ku.cs.project_SE.entity.promotion.promotion_action.builder.ActionBuilder;
+import org.springframework.stereotype.Component;
+
+import java.util.Map;
+import java.util.stream.Collectors;
+
+@Component
+public class ActionFactory {
+    private final Map<String, ActionBuilder> builders;
+    public ActionFactory(java.util.List<ActionBuilder> list) {
+        this.builders = list.stream().collect(Collectors.toUnmodifiableMap(ActionBuilder::type, b -> b));
+    }
+    public PromotionAction build(String type, ku.cs.project_SE.entity.promotion.Promotion p, java.util.Map<String,Object> params) {
+        var b = builders.get(type);
+        if (b == null) throw new IllegalArgumentException("Unsupported action type: " + type);
+        return b.build(p, params);
+    }
+}
+</file>
+
+<file path="entity/promotion/promotion_action/builder/ActionBuilder.java">
+package ku.cs.project_SE.entity.promotion.promotion_action.builder;
+
+import ku.cs.project_SE.entity.promotion.Promotion;
+import ku.cs.project_SE.entity.promotion.promotion_action.PromotionAction;
+
+import java.util.Map;
+
+public interface ActionBuilder {
+    String type();
+    PromotionAction build(Promotion promotion, Map<String, Object> params);
+}
+</file>
+
+<file path="entity/promotion/promotion_action/builder/FixedAmountDiscountActionBuilder.java">
+package ku.cs.project_SE.entity.promotion.promotion_action.builder;
+
+import ku.cs.project_SE.entity.promotion.Promotion;
+import ku.cs.project_SE.entity.promotion.promotion_action.FixedAmountDiscountAction;
+import ku.cs.project_SE.entity.promotion.promotion_action.PromotionAction;
+import org.springframework.stereotype.Component;
+
+import java.util.Map;
+
+@Component
+public class FixedAmountDiscountActionBuilder implements ActionBuilder {
+    @Override public String type() { return "FIXED"; }
+    @Override
+    public PromotionAction build(Promotion promotion, Map<String, Object> params) {
+        Object v = params.get("discountAmount");
+        double amt = (v instanceof Number n) ? n.doubleValue() : 0.0;
+        return FixedAmountDiscountAction.builder()
+                .promotion(promotion)
+                .promotionId(promotion.getPromotionId())
+                .discountAmount(amt)
+                .build();
+    }
+}
+</file>
+
+<file path="entity/promotion/promotion_action/builder/GiftActionBuilder.java">
+package ku.cs.project_SE.entity.promotion.promotion_action.builder;
+
+import ku.cs.project_SE.entity.promotion.Promotion;
+import ku.cs.project_SE.entity.promotion.promotion_action.GiftAction;
+import ku.cs.project_SE.entity.promotion.promotion_action.PromotionAction;
+import org.springframework.stereotype.Component;
+
+import java.util.Map;
+
+@Component
+public class GiftActionBuilder implements ActionBuilder {
+    @Override public String type() { return "GIFT"; }
+    @Override
+    public PromotionAction build(Promotion promotion, Map<String, Object> params) {
+        String giftId = params.get("giftId") != null ? String.valueOf(params.get("giftId")) : null;
+        int amount = params.get("amount") instanceof Number n ? n.intValue() : 1;
+        return GiftAction.builder()
+                .promotion(promotion)
+                .promotionId(promotion.getPromotionId())
+                .giftId(giftId)
+                .amount(amount)
+                .build();
+    }
+}
+</file>
+
+<file path="entity/promotion/promotion_action/builder/PercentageDiscountActionBuilder.java">
+package ku.cs.project_SE.entity.promotion.promotion_action.builder;
+
+import ku.cs.project_SE.entity.promotion.Promotion;
+import ku.cs.project_SE.entity.promotion.promotion_action.PercentageDiscountAction;
+import ku.cs.project_SE.entity.promotion.promotion_action.PromotionAction;
+import org.springframework.stereotype.Component;
+
+import java.util.Map;
+
+@Component
+public class PercentageDiscountActionBuilder implements ActionBuilder {
+    @Override public String type() { return "PERCENTAGE"; }
+    @Override
+    public PromotionAction build(Promotion promotion, Map<String, Object> params) {
+        Object v = params.get("percentage");
+        double pct = (v instanceof Number n) ? n.doubleValue() : 0.0;
+        return PercentageDiscountAction.builder()
+                .promotion(promotion)
+                .promotionId(promotion.getPromotionId())
+                .percentage(pct)
+                .build();
+    }
+}
+</file>
+
+<file path="entity/promotion/promotion_action/FixedAmountDiscountAction.java">
+package ku.cs.project_SE.entity.promotion.promotion_action;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.DecimalMin;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.entity.promotion.Promotion;
+import lombok.*;
+
+@Entity
+@Table(name = "fixed_amount_discount_actions")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class FixedAmountDiscountAction implements PromotionAction {
+
+    // ใช้ promotion_id เป็น Primary Key และเป็น FK ไปยัง promotions พร้อมกัน
+    @Id
+    @Column(name = "promotion_id", length = 64)
+    private String promotionId;
+
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @MapsId
+    @JoinColumn(name = "promotion_id")
+    private Promotion promotion;
+
+    @Column(name = "discount_amount", nullable = false)
+    @DecimalMin("0.0")
+    private double discountAmount; // จำนวนเงินส่วนลดคงที่
+
+    @Override
+    public double calculate(House house) {
+        if (house == null) return 0.0;
+        double price = house.getPrice(); // ปรับชื่อให้ตรงกับโมเดลจริง
+        if (price <= 0.0) return 0.0;
+        // ส่วนลดคงที่แต่ไม่เกินราคาสินค้า และไม่ติดลบ
+        return Math.max(0.0, Math.min(discountAmount, price));
+    }
+}
+</file>
+
+<file path="entity/promotion/promotion_action/GiftAction.java">
+package ku.cs.project_SE.entity.promotion.promotion_action;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.entity.promotion.Promotion;
+import lombok.*;
+
+@Entity
+@Table(name = "gift_actions")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class GiftAction implements PromotionAction {
+    @Id
+    @Column(name = "promotion_id", length = 64)
+    private String promotionId;
+
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @MapsId
+    @JoinColumn(name = "promotion_id")
+    private Promotion promotion;
+
+    @NotBlank
+    @Column(name = "gift_id", nullable = false, length = 64)
+    private String giftId;
+
+    @Min(1)
+    @Column(name = "amount", nullable = false)
+    private int amount;
+
+    @Override
+    public double calculate(House house) {
+        return 0.0;
+    }
+}
+</file>
+
+<file path="entity/promotion/promotion_action/PercentageDiscountAction.java">
+package ku.cs.project_SE.entity.promotion.promotion_action;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.DecimalMax;
+import jakarta.validation.constraints.DecimalMin;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.entity.promotion.Promotion;
+import lombok.*;
+
+@Entity
+@Table(name = "percentage_discount_actions")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class PercentageDiscountAction implements PromotionAction {
+    @Id
+    @Column(name = "promotion_id", length = 64)
+    private String promotionId;
+
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @MapsId
+    @JoinColumn(name = "promotion_id")
+    private Promotion promotion;
+
+    @Column(name = "percentage", nullable = false)
+    @DecimalMin("0.0")
+    @DecimalMax("100.0")
+    private double percentage;
+
+    @Override
+    public double calculate(House house) {
+        if (house == null) return 0.0;
+        double price = house.getPrice();
+        if (price <= 0) return 0.0;
+        double discount = price * (percentage / 100.0);
+        return Math.max(0.0, Math.min(discount, price));
+    }
+}
+</file>
+
+<file path="entity/promotion/promotion_action/PromotionAction.java">
+package ku.cs.project_SE.entity.promotion.promotion_action;
+
+import ku.cs.project_SE.entity.house.House;
+
+public interface PromotionAction {
+    double calculate(House house);
+}
+</file>
+
+<file path="entity/promotion/promotion_condition/builder/ConditionBuilder.java">
+// keam
+package ku.cs.project_SE.entity.promotion.promotion_condition.builder;
+
+import ku.cs.project_SE.entity.promotion.promotion_condition.ConditionSpec;
+import ku.cs.project_SE.entity.promotion.promotion_condition.conditions.PromotionCondition;
+
+public interface ConditionBuilder {
+    String type();
+    PromotionCondition build(ConditionSpec spec);
+}
+</file>
+
+<file path="entity/promotion/promotion_condition/builder/DateRangeConditionBuilder.java">
+// keam
+package ku.cs.project_SE.entity.promotion.promotion_condition.builder;
+
+import ku.cs.project_SE.entity.promotion.promotion_condition.ConditionSpec;
+import ku.cs.project_SE.entity.promotion.promotion_condition.conditions.PromotionCondition;
+import org.springframework.stereotype.Component;
+
+@Component
+public class DateRangeConditionBuilder implements ConditionBuilder {
+    @Override public String type() { return "DATE_RANGE"; }
+
+    @Override
+    public PromotionCondition build(ConditionSpec spec) {
+        var p = spec.getParams();
+        String start = (String) p.get("startDate");
+        String end   = (String) p.get("endDate");
+        if (start == null || end == null) {
+            throw new IllegalArgumentException("startDate/endDate required");
+        }
+
+        var cond = new ku.cs.project_SE.entity.promotion.promotion_condition.conditions.DateRangeCondition();
+        cond.setStartDate(java.sql.Timestamp.valueOf(start.replace("T"," ").replace("Z","")));
+        cond.setEndDate(java.sql.Timestamp.valueOf(end.replace("T"," ").replace("Z","")));
+        return cond;
+    }
+}
+</file>
+
+<file path="entity/promotion/promotion_condition/builder/MinPriceConditionBuilder.java">
+// keam
+package ku.cs.project_SE.entity.promotion.promotion_condition.builder;
+
+import ku.cs.project_SE.entity.promotion.promotion_condition.ConditionSpec;
+import ku.cs.project_SE.entity.promotion.promotion_condition.conditions.MinimumPriceCondition;
+import ku.cs.project_SE.entity.promotion.promotion_condition.conditions.PromotionCondition;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MinPriceConditionBuilder implements ConditionBuilder {
+    @Override public String type() { return "MIN_PRICE"; }
+
+    @Override
+    public PromotionCondition build(ConditionSpec spec) {
+        Object v = spec.getParams().get("minimumPrice");
+        if (!(v instanceof Number n)) {
+            throw new IllegalArgumentException("minimumPrice must be number");
+        }
+        return MinimumPriceCondition.builder()
+                .minimumPrice(n.doubleValue())
+                .build();
+    }
+}
+</file>
+
+<file path="entity/promotion/promotion_condition/builder/ProductCategoryConditionBuilder.java">
+// keam
+package ku.cs.project_SE.entity.promotion.promotion_condition.builder;
+
+import ku.cs.project_SE.entity.promotion.promotion_condition.ConditionSpec;
+import ku.cs.project_SE.entity.promotion.promotion_condition.conditions.ProductCategoryCondition;
+import ku.cs.project_SE.entity.promotion.promotion_condition.conditions.PromotionCondition;
+import org.springframework.stereotype.Component;
+
+@Component
+public class ProductCategoryConditionBuilder implements ConditionBuilder {
+    @Override public String type() { return "PRODUCT_CATEGORY"; }
+
+    @Override
+    public PromotionCondition build(ConditionSpec spec) {
+        Object v = spec.getParams().get("categoryId");
+        if (!(v instanceof String s) || s.isBlank()) {
+            throw new IllegalArgumentException("categoryId is required");
+        }
+        return ProductCategoryCondition.builder().categoryId(s).build();
+    }
+}
+</file>
+
+<file path="entity/promotion/promotion_condition/ConditionFactory.java">
+// keam
+package ku.cs.project_SE.entity.promotion.promotion_condition;
+
+import ku.cs.project_SE.entity.promotion.promotion_condition.builder.ConditionBuilder;
+import ku.cs.project_SE.entity.promotion.promotion_condition.conditions.PromotionCondition;
+import org.springframework.stereotype.Component;
+
+import java.util.Map;
+import java.util.stream.Collectors;
+
+@Component
+public class ConditionFactory {
+
+    private final Map<String, ConditionBuilder> builders;
+
+    public ConditionFactory(java.util.List<ConditionBuilder> builderList) {
+        this.builders = builderList.stream()
+                .collect(Collectors.toUnmodifiableMap(ConditionBuilder::type, b -> b));
+    }
+
+    public PromotionCondition fromSpec(ConditionSpec spec) {
+        var b = builders.get(spec.getType());
+        if (b == null) {
+            throw new IllegalArgumentException("Unsupported condition type: " + spec.getType());
+        }
+        return b.build(spec);
+    }
+}
+</file>
+
+<file path="entity/promotion/promotion_condition/ConditionListConverter.java">
+package ku.cs.project_SE.entity.promotion.promotion_condition;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.persistence.AttributeConverter;
+import jakarta.persistence.Converter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Converter
+public class ConditionListConverter implements AttributeConverter<List<ConditionSpec>, String> {
+    private static final ObjectMapper MAPPER = new ObjectMapper();
+    private static final TypeReference<List<ConditionSpec>> TYPE = new TypeReference<>() {};
+    @Override public String convertToDatabaseColumn(List<ConditionSpec> attribute) {
+        try { return attribute == null ? "[]" : MAPPER.writeValueAsString(attribute); }
+        catch (Exception e) { throw new IllegalStateException(e); }
+    }
+    @Override public List<ConditionSpec> convertToEntityAttribute(String dbData) {
+        try { return (dbData == null || dbData.isBlank()) ? new ArrayList<>() : MAPPER.readValue(dbData, TYPE); }
+        catch (Exception e) { throw new IllegalStateException(e); }
+    }
+}
+</file>
+
+<file path="entity/promotion/promotion_condition/conditions/CompositeCondition.java">
+package ku.cs.project_SE.entity.promotion.promotion_condition.conditions;
+
+import jakarta.persistence.*;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.entity.promotion.Promotion;
+import ku.cs.project_SE.entity.promotion.promotion_condition.ConditionListConverter;
+import ku.cs.project_SE.entity.promotion.promotion_condition.ConditionSpec;
+import ku.cs.project_SE.entity.promotion.promotion_condition.LogicalOperator;
+import lombok.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
+
+@Entity
+@Table(name = "composite_conditions")
+@Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class CompositeCondition implements PromotionCondition {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "promotion_id", nullable = false)
+    private Promotion promotion;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "operator", nullable = false, length = 8)
+    private LogicalOperator operator;
+
+    @Convert(converter = ConditionListConverter.class)
+    @Column(name = "conditions_json", nullable = false, columnDefinition = "TEXT")
+    @Builder.Default
+    private List<ConditionSpec> conditions = new ArrayList<>();
+
+    @Transient
+    private Function<ConditionSpec, PromotionCondition> resolver;
+
+    @Override
+    public boolean evaluate(House house) {
+        if (resolver == null) {
+            throw new IllegalStateException("CompositeCondition resolver is not set");
+        }
+
+        return switch (operator) {
+            case NOT -> {
+                boolean child = conditions.stream().findFirst()
+                        .map(resolver)
+                        .map(c -> c.evaluate(house))
+                        .orElse(false);
+                yield !child;
+            }
+            case AND -> {
+                for (ConditionSpec spec : conditions) {
+                    if (!resolver.apply(spec).evaluate(house)) yield false;
+                }
+                yield true;
+            }
+            case OR -> {
+                for (ConditionSpec spec : conditions) {
+                    if (resolver.apply(spec).evaluate(house)) yield true;
+                }
+                yield false;
+            }
+        };
+    }
+
+    public void addConditionSpec(ConditionSpec spec) {
+        if (conditions == null) conditions = new ArrayList<>();
+        conditions.add(spec);
+    }
+}
+</file>
+
+<file path="entity/promotion/promotion_condition/conditions/DateRangeCondition.java">
+package ku.cs.project_SE.entity.promotion.promotion_condition.conditions;
+
+import jakarta.persistence.*;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.entity.promotion.Promotion;
+import lombok.*;
+
+import java.util.Date;
+
+@Entity
+@Table(name = "date_range_conditions")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class DateRangeCondition implements PromotionCondition {
+
+    @Id
+    @Column(name = "promotion_id", length = 64)
+    private String promotionId;
+
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @MapsId
+    @JoinColumn(name = "promotion_id")
+    private Promotion promotion;
+
+    // ใช้ java.util.Date จึงกำหนด @Temporal ให้ชัดเจน
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "start_date", nullable = false)
+    private Date startDate;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "end_date", nullable = false)
+    private Date endDate;
+
+    @Override
+    public boolean evaluate(House house) {
+        if (startDate == null || endDate == null) return false;
+        Date now = new Date();
+        return !now.before(startDate) && !now.after(endDate);
+    }
+}
+</file>
+
+<file path="entity/promotion/promotion_condition/conditions/MinimumPriceCondition.java">
+package ku.cs.project_SE.entity.promotion.promotion_condition.conditions;
+
+import jakarta.persistence.*;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.entity.promotion.Promotion;
+import lombok.*;
+
+@Entity
+@Table(name = "minimum_price_conditions")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class MinimumPriceCondition implements PromotionCondition {
+
+    @Id
+    @Column(name = "promotion_id", length = 64)
+    private String promotionId;
+
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @MapsId
+    @JoinColumn(name = "promotion_id")
+    private Promotion promotion;
+
+    @Column(name = "minimum_price", nullable = false)
+    private double minimumPrice;
+
+    @Override
+    public boolean evaluate(House house) {
+        return true;
+    }
+}
+</file>
+
+<file path="entity/promotion/promotion_condition/conditions/ProductCategoryCondition.java">
+package ku.cs.project_SE.entity.promotion.promotion_condition.conditions;
+
+import jakarta.persistence.*;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.entity.promotion.Promotion;
+import lombok.*;
+
+@Entity
+@Table(name = "product_category_conditions")
+@Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class ProductCategoryCondition implements PromotionCondition {
+
+    @Id
+    @Column(name = "promotion_id", length = 64)
+    private String promotionId;
+
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @MapsId
+    @JoinColumn(name = "promotion_id")
+    private Promotion promotion;
+
+    @Column(name = "category_id", nullable = false, length = 64)
+    private String categoryId;
+
+    @Override
+    public boolean evaluate(House house) {
+        return true;
+    }
+}
+</file>
+
+<file path="entity/promotion/promotion_condition/conditions/PromotionCondition.java">
+package ku.cs.project_SE.entity.promotion.promotion_condition.conditions;
+
+import ku.cs.project_SE.entity.house.House;
+
+public interface PromotionCondition {
+    boolean evaluate(House house);
+}
+</file>
+
+<file path="entity/promotion/promotion_condition/ConditionSpec.java">
+package ku.cs.project_SE.entity.promotion.promotion_condition;
+
+import lombok.*;
+
+import java.util.Map;
+
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
+public class ConditionSpec {
+    private String type;
+    private Map<String, Object> params;
+}
+</file>
+
+<file path="entity/promotion/promotion_condition/LogicalOperator.java">
+package ku.cs.project_SE.entity.promotion.promotion_condition;
+public enum LogicalOperator { AND, OR, NOT }
+</file>
+
+<file path="entity/promotion/Promotion.java">
+// keam
+package ku.cs.project_SE.entity.promotion;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import ku.cs.project_SE.entity.promotion.promotion_action.FixedAmountDiscountAction;
+import ku.cs.project_SE.entity.promotion.promotion_action.GiftAction;
+import ku.cs.project_SE.entity.promotion.promotion_action.PercentageDiscountAction;
+import ku.cs.project_SE.entity.promotion.promotion_condition.conditions.CompositeCondition;
+import lombok.*;
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table(name = "promotions")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Promotion {
+
+    @Id
+    @Column(name = "promotion_id", length = 64)
+    private String promotionId;
+
+    @NotBlank
+    @Column(nullable = false)
+    private String promotionName;
+
+    @Column(length = 2000)
+    private String description;
+
+    @Column(nullable = false)
+    private boolean isActive = true;
+
+    @Min(0)
+    @Column(nullable = false)
+    private int usageLimit = 0;
+
+    @Min(0)
+    @Column(nullable = false)
+    private int usedCount = 0;
+
+    @Column(nullable = false, updatable = false)
+    private String createdBy;
+
+    @Column(nullable = false, updatable = false)
+    private Instant createdAt;
+
+    @Column(nullable = false)
+    private Instant updatedAt;
+
+    @OneToMany(mappedBy = "promotion",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    @Builder.Default
+    private List<CompositeCondition> conditions = new ArrayList<>();
+
+    @OneToOne(mappedBy = "promotion",
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    private PercentageDiscountAction percentageAction;
+
+    @OneToOne(mappedBy = "promotion",
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    private FixedAmountDiscountAction fixedAction;
+
+    @OneToOne(mappedBy = "promotion",
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    private GiftAction giftAction;
+
+    public void setPercentageAction(ku.cs.project_SE.entity.promotion.promotion_action.PercentageDiscountAction a) {
+        this.percentageAction = a;
+        if (a != null) { a.setPromotion(this); a.setPromotionId(this.promotionId); }
+        this.fixedAction = null;
+        this.giftAction = null;
+    }
+    public void setFixedAction(ku.cs.project_SE.entity.promotion.promotion_action.FixedAmountDiscountAction a) {
+        this.fixedAction = a;
+        if (a != null) { a.setPromotion(this); a.setPromotionId(this.promotionId); }
+        this.percentageAction = null;
+        this.giftAction = null;
+    }
+    public void setGiftAction(ku.cs.project_SE.entity.promotion.promotion_action.GiftAction a) {
+        this.giftAction = a;
+        if (a != null) { a.setPromotion(this); a.setPromotionId(this.promotionId); }
+        this.percentageAction = null;
+        this.fixedAction = null;
+    }
+}
+</file>
+
+<file path="entity/user/Role.java">
+package ku.cs.project_SE.entity.user;
+
+//Tee
+public enum Role {
+    ADMIN,INVESTOR,NORMAL
+}
+</file>
+
+<file path="entity/user/User.java">
+package ku.cs.project_SE.entity.user;
+
+import jakarta.persistence.*;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.entity.house_register.HouseRegister;
+import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
+
+import java.util.HashSet;
+import java.util.Set;
+import java.util.UUID;
+
+//Tee
+@Entity
+@Table(name = "users")
+@Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class User {
+
+    @Id
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    @Column(name = "user_id", updatable = false, nullable = false)
+    private UUID userId;
+
+    @Column(name = "password")
+    private String password;
+
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "last_name")
+    private String lastName;
+
+    @Column(name = "phone_number")
+    private String phoneNumber;
+
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "role")
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
+    @OneToMany(mappedBy = "user")
+    private Set<HouseRegister> houseRegisters = new HashSet<>();
+
+    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<House> houses = new HashSet<>();
+
+
+}
+</file>
+
+<file path="enums/house/HouseStatus.java">
+package ku.cs.project_SE.enums.house;
+
+public enum HouseStatus {
+    PENDING,MODIFIED, APPROVED,REJECTED,ABANDON
+}
+</file>
+
+<file path="enums/house/HouseType.java">
+package ku.cs.project_SE.enums.house;
+
+public enum HouseType {
+    SINGLE,TWIN
+}
+</file>
+
+<file path="exception/UserExistsException.java">
+package ku.cs.project_SE.exception;
+
+public class UserExistsException extends RuntimeException{
+    public UserExistsException(String message) {
+        super(message);
+    }
+}
+</file>
+
+<file path="factory/HouseFilterFactory.java">
+package ku.cs.project_SE.factory;
+
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.model.filter.action.EntityFilter;
+import ku.cs.project_SE.model.filter.action.house.*;
+import ku.cs.project_SE.model.filter.specification.*;
+import org.json.JSONObject;
+import org.springframework.data.jpa.domain.Specification;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+public class HouseFilterFactory {
+    public List<FilterSpecification> getHouseFilterSpecifications(){
+        List<FilterSpecification> filterSpecifications = new ArrayList<>();
+        filterSpecifications.add(new MultiSelectionFilterSpecification("พื้นที่", List.of("เกษตร","พหลโยธิน"), List.of("เกษตร")));
+        filterSpecifications.add(new SingleSelectionFilterSpecification("ประเภทบ้าน", List.of("บ้านเดี่ยว","ทาวโฮม")));
+        filterSpecifications.add(new DropdownFilterSpecification("ความใหม่", List.of("มือหนึ่ง","มือสอง")));
+        filterSpecifications.add(new DropdownFilterSpecification("เรียงตาม", List.of("ใหม่สุดก่อน","เก่าสุดก่อน")));
+        filterSpecifications.add(new DropdownFilterSpecification("ห้องนอน", List.of("ทั้งหมด", "1", "2", "3", "4", "5", "6+")));
+        filterSpecifications.add(new IntegerNumberRangeSpecification("ขนาดพื้นที่", 0, 10000, 0, "พื้นที่ต่ำสุด", "พื้นที่สูงสุด", "ตร.ม."));
+        return filterSpecifications;
+    }
+
+    public Specification<House> getFilterSpecification(String filterName, JSONObject filterData) {
+        if (filterName.equals("พื้นที่")){
+            AreaFilter areaFilter = new AreaFilter();
+            MultiSelectionDTO dto = new MultiSelectionDTO();
+            dto.fromJSON(filterData);
+            areaFilter.toSpecification(dto);
+            return areaFilter.toSpecification(dto);
+        } else if (filterName.equals("ประเภทบ้าน")) {
+            HouseTypeFilter houseTypeFilter = new HouseTypeFilter();
+            SingleSelectionFilterDTO dto = new SingleSelectionFilterDTO();
+            dto.fromJSON(filterData);
+            return houseTypeFilter.toSpecification(dto);
+        } else if (filterName.equals("ความใหม่")){
+            OldNewFilter  oldNewFilter = new OldNewFilter();
+            DropdownFilterDTO dto = new DropdownFilterDTO();
+            dto.fromJSON(filterData);
+            return oldNewFilter.toSpecification(dto);
+        } else if (filterName.equals("ห้องนอน")){
+            BedRoomFilter  bedRoomFilter = new BedRoomFilter();
+            DropdownFilterDTO dto = new DropdownFilterDTO();
+            dto.fromJSON(filterData);
+            return bedRoomFilter.toSpecification(dto);
+        } else if (filterName.equals("ขนาดพื้นที่")){
+            AreaSizeFilter areaSizeFilter = new AreaSizeFilter();
+            IntegerNumberRangeDTO dto = new IntegerNumberRangeDTO();
+            dto.fromJSON(filterData);
+            return areaSizeFilter.toSpecification(dto);
+        }
+        return null;
+    }
+}
+</file>
+
+<file path="mapper/helper/UrlBuilder.java">
+package ku.cs.project_SE.mapper.helper;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class UrlBuilder {
+
+    private final String base; // เช่น "/images/"
+
+    public UrlBuilder(@Value("${app.images.show-base:/images/}") String base) {
+        this.base = base.endsWith("/") ? base : base + "/";
+    }
+
+    public String imageUrl(Long id) {
+        return base + id;
+    }
+}
+</file>
+
+<file path="mapper/HouseMapper.java">
+// keam
+package ku.cs.project_SE.mapper;
+
+import ku.cs.project_SE.dto.house.HouseCreateAdminDto;
+import ku.cs.project_SE.dto.house.HouseEditAdminRequestDto;
+import ku.cs.project_SE.dto.house.*;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.entity.house.HouseRental;
+import ku.cs.project_SE.entity.house.HouseRenovate;
+import ku.cs.project_SE.entity.image.Image;
+import ku.cs.project_SE.entity.project.Project;
+import org.mapstruct.*;
+
+import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+@Mapper(componentModel = "spring")
+public interface HouseMapper {
+
+    @Mapping(target = "project", expression = "java(convertProjectNameToProject(dto.projectName()))")
+    @Mapping(target = "houseName", source = "houseName")
+    @Mapping(target = "caption", source = "caption")
+    @Mapping(target = "description", source = "houseDescription")
+    @Mapping(target = "images", expression = "java(convertImageIdsToImages(dto.imageId()))")
+    @Mapping(target = "houseType", expression = "java(dto.houseType() != null ? dto.houseType().name() : null)")
+    @Mapping(target = "price", expression = "java(dto.price() != null ? Double.parseDouble(dto.price()) : 0.0)")
+    @Mapping(target = "bedrooms", expression = "java(dto.bedrooms() != null ? dto.bedrooms() : 0)")
+    @Mapping(target = "bathrooms", expression = "java(dto.bathrooms() != null ? dto.bathrooms() : 0)")
+    @Mapping(target = "squareFootage", expression = "java(dto.squareFootage() != null ? dto.squareFootage() : 0.0)")
+    @Mapping(target = "yearBuilt", expression = "java(dto.yearBuilt() != null ? dto.yearBuilt() : 0)")
+    @Mapping(target = "garageSpaces", expression = "java(dto.garageSpaces() != null ? dto.garageSpaces() : 0)")
+    @Mapping(target = "address", source = "address")
+    House createByAdminToEntity(HouseCreateAdminDto dto);
+
+    @Mapping(target = "proposedProjectname", source = "purposedProjectName")
+    @Mapping(target = "houseName", source = "houseName")
+    @Mapping(target = "caption", source = "caption")
+    @Mapping(target = "description", source = "houseDescription")
+    @Mapping(target = "images", expression = "java(convertImageIdsToImages(dto.imageId()))")
+    @Mapping(target = "houseType", expression = "java(dto.houseType() != null ? dto.houseType().name() : null)")
+    @Mapping(target = "price", expression = "java(dto.price() != null ? Double.parseDouble(dto.price()) : 0.0)")
+    @Mapping(target = "bedrooms", expression = "java(dto.bedrooms() != null ? dto.bedrooms() : 0)")
+    @Mapping(target = "bathrooms", expression = "java(dto.bathrooms() != null ? dto.bathrooms() : 0)")
+    @Mapping(target = "squareFootage", expression = "java(dto.squareFootage() != null ? dto.squareFootage() : 0.0)")
+    @Mapping(target = "yearBuilt", expression = "java(dto.yearBuilt() != null ? dto.yearBuilt() : 0)")
+    @Mapping(target = "garageSpaces", expression = "java(dto.garageSpaces() != null ? dto.garageSpaces() : 0)")
+    @Mapping(target = "address", source = "address")
+    House createByInvestorToEntity(HouseCreateInvestorDto dto);
+
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    @Mapping(target = "project", expression = "java(convertProjectNameToProject(dto.project()))")
+    @Mapping(target = "houseName", source = "houseName")
+    @Mapping(target = "caption", source = "caption")
+    @Mapping(target = "description", source = "houseDescription")
+    @Mapping(target = "images", expression = "java(convertImageIdsToImages(dto.imageId()))")
+    @Mapping(target = "houseType", source = "houseType")
+    @Mapping(target = "price", source = "price")
+    @Mapping(target = "bedrooms", source = "bedrooms")
+    @Mapping(target = "bathrooms", source = "bathrooms")
+    @Mapping(target = "squareFootage", source = "squareFootage")
+    @Mapping(target = "yearBuilt", source = "yearBuilt")
+    @Mapping(target = "garageSpaces", source = "garageSpaces")
+    @Mapping(target = "address", source = "address")
+    void updateEntityFromEdit(HouseEditAdminRequestDto dto, @MappingTarget House house);
+
+    @Mapping(target = "houseName", source = "houseName")
+    @Mapping(target = "price", expression = "java(toBigDecimal(house.getPrice()))")
+    @Mapping(target = "imageId", expression = "java(convertImagesToImageIds(house.getImages()))")
+    @Mapping(target = "rental", expression = "java(toRentalDto(house.getRental()))")
+    @Mapping(target = "renovate", expression = "java(toRenovateDto(house.getRenovate()))")
+    @Mapping(target = "registeredForVisit",
+            expression = "java(house.getHouseRegisters() != null && !house.getHouseRegisters().isEmpty())")
+    @Mapping(target = "address", source = "address")
+    HouseDetailDto toDetail(House house);
+
+    @Mapping(target = "houseName", source = "houseName")
+    @Mapping(target = "houseType", expression = "java(ku.cs.project_SE.enums.house.HouseType.valueOf(entity.getHouseType()))")
+    @Mapping(target = "price", expression = "java(String.valueOf(entity.getPrice()))")
+    @Mapping(target = "houseDescription", source = "description")
+    @Mapping(target = "imageId", expression = "java(convertImagesToImageIds(entity.getImages()))")
+    @Mapping(target = "projectName", expression = "java(convertProjectToProjectName(entity.getProject()))")
+    HouseCreateAdminDto toCreate(House entity);
+
+    default BigDecimal toBigDecimal(Double d) {
+        return d == null ? null : BigDecimal.valueOf(d);
+    }
+
+    default Set<Image> convertImageIdsToImages(List<Long> imageIds) {
+        if (imageIds == null || imageIds.isEmpty()) return new HashSet<>();
+        return imageIds.stream().map(id -> {
+            Image image = new Image();
+            image.setImageId(id);
+            return image;
+        }).collect(Collectors.toSet());
+    }
+
+    default List<Long> convertImagesToImageIds(Set<Image> images) {
+        if (images == null || images.isEmpty()) return List.of();
+        return images.stream().map(Image::getImageId).collect(Collectors.toList());
+    }
+
+    default Project convertProjectNameToProject(String projectName) {
+        if (projectName == null || projectName.trim().isEmpty()) return null;
+        Project project = new Project();
+        project.setProjectName(projectName);
+        return project;
+    }
+
+    default String convertProjectToProjectName(Project project) {
+        return project != null ? project.getProjectName() : null;
+    }
+
+    default RentalDto toRentalDto(HouseRental r) {
+        if (r == null) return new RentalDto(null, null, null, null);
+        return new RentalDto(
+                r.getRentalYield(),
+                r.getPropertyTax(),
+                r.getMaintenanceCost(),
+                r.getAdditionalData()
+        );
+    }
+
+    default RenovateDto toRenovateDto(HouseRenovate v) {
+        if (v == null) return new RenovateDto(null, null, null,null);
+        return new RenovateDto(
+                v.getInnovateCost(),
+                v.getStructure(),
+                v.getLawInformation(),
+                v.getAdditionalData()
+        );
+    }
+}
+</file>
+
+<file path="mapper/HouseRequestMapper.java">
+package ku.cs.project_SE.mapper;
+
+import ku.cs.project_SE.dto.house.HouseRequestDto;
+import ku.cs.project_SE.entity.house.HouseRequest;
+import org.mapstruct.*;
+
+@Mapper(componentModel = "spring")
+public interface HouseRequestMapper {
+
+    @Mapping(source = "requester", target = "user")
+    HouseRequestDto toDto(HouseRequest houseRequest);
+
+    @Mapping(source = "user", target = "requester") // ◀️ map กลับในทิศทางตรงกันข้าม
+    HouseRequest toEntity(HouseRequestDto dto);
+}
+</file>
+
+<file path="mapper/ImageMapper.java">
+// keam
+package ku.cs.project_SE.mapper;
+
+import ku.cs.project_SE.dto.image.ImageDto;
+import ku.cs.project_SE.dto.image.CreateImageDto;
+import ku.cs.project_SE.entity.image.Image;
+import org.mapstruct.*;
+
+@Mapper(componentModel = "spring")
+public interface ImageMapper {
+
+    @Mapping(target = "id",   source = "imageId")
+    @Mapping(target = "path", source = "imagePath")
+    @Mapping(target = "url",  ignore = true)
+    ImageDto toDto(Image image);
+
+    @Mapping(target = "imageId", ignore = true)
+    @Mapping(target = "imagePath", source = "path")
+    Image toEntity(CreateImageDto dto);
+}
+</file>
+
+<file path="mapper/ProjectMapper.java">
+// keam
+package ku.cs.project_SE.mapper;
+
+import ku.cs.project_SE.dto.project.ProjectCreateDto;
+import ku.cs.project_SE.dto.project.ProjectResponseDto;
+import ku.cs.project_SE.entity.image.Image;
+import ku.cs.project_SE.entity.project.Project;
+import ku.cs.project_SE.mapper.helper.UrlBuilder;
+import org.mapstruct.Context;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+
+@Mapper(componentModel = "spring")
+public interface ProjectMapper {
+
+    @Mapping(target = "imageId",
+            expression = "java(project.getImage() != null ? project.getImage().getImageId() : null)")
+    @Mapping(target = "imageUrl",
+            expression = "java(project.getImage() != null ? urlBuilder.imageUrl(project.getImage().getImageId()) : null)")
+    ProjectResponseDto toDto(Project project, @Context UrlBuilder urlBuilder);
+
+    @Mapping(target = "image", source = "image")
+    Project toEntity(ProjectCreateDto dto, Image image);
+}
+</file>
+
+<file path="mapper/PromotionMapper.java">
+// keam
+package ku.cs.project_SE.mapper;
+
+import ku.cs.project_SE.dto.promotion.CreatePromotionDto;
+import ku.cs.project_SE.dto.promotion.PromotionResponseDto;
+import ku.cs.project_SE.dto.promotion.UpdatePromotionDto;
+import ku.cs.project_SE.entity.promotion.Promotion;
+import org.mapstruct.*;
+import java.time.Instant;
+
+@Mapper(
+        componentModel = "spring",
+        unmappedTargetPolicy = ReportingPolicy.IGNORE
+)
+
+public interface PromotionMapper {
+
+    PromotionResponseDto toDto(Promotion entity);
+
+    @Mapping(target = "promotionId", ignore = true)
+    @Mapping(target = "createdAt", ignore = true)
+    @Mapping(target = "updatedAt", ignore = true)
+    Promotion toEntity(CreatePromotionDto req);
+
+    @BeanMapping(ignoreByDefault = false)
+    void applyUpdate(UpdatePromotionDto req, @MappingTarget Promotion entity);
+
+    @AfterMapping
+    default void setTimestampsOnCreate(CreatePromotionDto req, @MappingTarget Promotion entity) {
+        entity.setCreatedAt(Instant.now());
+        entity.setUpdatedAt(Instant.now());
+    }
+
+    @AfterMapping
+    default void touchUpdatedAt(UpdatePromotionDto req, @MappingTarget Promotion entity) {
+        entity.setUpdatedAt(Instant.now());
+    }
+}
+</file>
+
+<file path="mapper/UserMapper.java">
+package ku.cs.project_SE.mapper;
+
+import ku.cs.project_SE.dto.user.UserRequestDto;
+import ku.cs.project_SE.dto.user.UserRespondDto;
+import ku.cs.project_SE.entity.user.Role;
+import ku.cs.project_SE.entity.user.User;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.Named;
+import org.mapstruct.ReportingPolicy;
+
+@Mapper (
+        componentModel = "spring",
+        unmappedTargetPolicy = ReportingPolicy.IGNORE
+)
+public interface UserMapper {
+
+    // Entity → DTO
+    @Mapping(source = "firstName", target = "firstName")
+    @Mapping(source = "lastName", target = "lastName")
+    @Mapping(source = "email",target = "email")
+    @Mapping(source = "phoneNumber", target = "phoneNumber")
+    @Mapping(source = "role", target = "role", qualifiedByName = "roleToString")
+    UserRespondDto toDto(User entity);
+
+    // DTO → Entity
+    @Mapping(source = "id", target = "userId")
+    @Mapping(source = "first", target = "firstName")
+    @Mapping(source = "lastname", target = "lastName")
+    @Mapping(source = "phone", target = "phoneNumber")
+    @Mapping(source = "role", target = "role", qualifiedByName = "stringToRole")
+    User toEntity(UserRequestDto dto);
+
+    // Converter: Role → String
+    @Named("roleToString")
+    default String roleToString(Role role) {
+        return role != null ? role.name() : null;
+    }
+
+    // Converter: String → Role
+    @Named("stringToRole")
+    default Role stringToRole(String role) {
+        return role != null ? Role.valueOf(role) : null;
+    }
+}
+</file>
+
+<file path="model/filter/action/EntityFilter.java">
+package ku.cs.project_SE.model.filter.action;
+
+import ku.cs.project_SE.model.filter.specification.FilterSpecification;
+import org.json.JSONObject;
+import org.springframework.data.jpa.domain.Specification;
+
+@FunctionalInterface
+public interface EntityFilter<T,SPEC> {
+    Specification<T> toSpecification(SPEC specificationValue) throws Exception;
+}
+</file>
+
+<file path="model/filter/action/house/AreaFilter.java">
+package ku.cs.project_SE.model.filter.action.house;
+
+import jakarta.persistence.criteria.Predicate;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.model.filter.action.EntityFilter;
+import ku.cs.project_SE.model.filter.specification.MultiSelectionDTO;
+import ku.cs.project_SE.model.filter.specification.MultiSelectionFilterSpecification;
+import org.springframework.data.jpa.domain.Specification;
+
+import java.util.List;
+
+public class AreaFilter implements EntityFilter<House, MultiSelectionDTO> {
+    @Override
+    public Specification<House> toSpecification(MultiSelectionDTO specificationValue) {
+        return ((root, query, criteriaBuilder) -> {
+            List<String> selectedAreas = specificationValue.selectedChoices();
+
+            // If no areas selected, return all
+            if (selectedAreas == null || selectedAreas.isEmpty()) {
+                return criteriaBuilder.isTrue(criteriaBuilder.literal(true));
+            }
+
+            // Filter by area in address.area field
+            return root.get("address").get("area").in(selectedAreas);
+        });
+    }
+}
+</file>
+
+<file path="model/filter/action/house/AreaSizeFilter.java">
+package ku.cs.project_SE.model.filter.action.house;
+
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.model.filter.action.EntityFilter;
+import ku.cs.project_SE.model.filter.specification.IntegerNumberRangeDTO;
+import ku.cs.project_SE.model.filter.specification.IntegerNumberRangeSpecification;
+import org.springframework.data.jpa.domain.Specification;
+
+public class AreaSizeFilter implements EntityFilter<House, IntegerNumberRangeDTO> {
+    @Override
+    public Specification<House> toSpecification(IntegerNumberRangeDTO specificationValue) {
+        return ((root, query, criteriaBuilder) -> {
+            int value = specificationValue.value();
+
+            // If value is 0 or negative, return all
+            if (value <= 0) {
+                return criteriaBuilder.isTrue(criteriaBuilder.literal(true));
+            }
+
+            // Filter houses with squareFootage greater than or equal to the specified value
+            return criteriaBuilder.greaterThanOrEqualTo(root.get("squareFootage"), (double) value);
+        });
+    }
+}
+</file>
+
+<file path="model/filter/action/house/BedRoomFilter.java">
+package ku.cs.project_SE.model.filter.action.house;
+
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.model.filter.action.EntityFilter;
+import ku.cs.project_SE.model.filter.specification.DropdownFilterDTO;
+import ku.cs.project_SE.model.filter.specification.SingleSelectionFilterDTO;
+import org.springframework.data.jpa.domain.Specification;
+
+public class BedRoomFilter implements EntityFilter<House, DropdownFilterDTO> {
+    @Override
+    public Specification<House> toSpecification(DropdownFilterDTO specificationValue) {
+        return ((root, query, criteriaBuilder) -> {
+            String selectedChoice = specificationValue.selectedChoice();
+
+            // If no choice, empty, or "ทั้งหมด" (all), return all
+            if (selectedChoice == null || selectedChoice.isEmpty() || selectedChoice.equals("ทั้งหมด")) {
+                return criteriaBuilder.isTrue(criteriaBuilder.literal(true));
+            }
+
+            // Handle "6+" case - 6 or more bedrooms
+            if (selectedChoice.equals("6+")) {
+                return criteriaBuilder.greaterThanOrEqualTo(root.get("bedrooms"), 6);
+            }
+
+            // Parse the number and filter by exact bedroom count
+            try {
+                int bedroomCount = Integer.parseInt(selectedChoice);
+                return criteriaBuilder.equal(root.get("bedrooms"), bedroomCount);
+            } catch (NumberFormatException e) {
+                // If parsing fails, return all
+                return criteriaBuilder.isTrue(criteriaBuilder.literal(true));
+            }
+        });
+    }
+}
+</file>
+
+<file path="model/filter/action/house/HouseTypeFilter.java">
+package ku.cs.project_SE.model.filter.action.house;
+
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.model.filter.action.EntityFilter;
+import ku.cs.project_SE.model.filter.specification.SingleSelectionFilterDTO;
+import org.springframework.data.jpa.domain.Specification;
+
+public class HouseTypeFilter implements EntityFilter<House, SingleSelectionFilterDTO> {
+    @Override
+    public Specification<House> toSpecification(SingleSelectionFilterDTO specificationValue) {
+        return ((root, query, criteriaBuilder) -> {
+            String selectedType = specificationValue.selectedChoices();
+
+            // If no type selected or empty, return all
+            if (selectedType == null || selectedType.isEmpty()) {
+                return criteriaBuilder.isTrue(criteriaBuilder.literal(true));
+            }
+
+            // Filter by house type
+            return criteriaBuilder.equal(root.get("houseType"), selectedType);
+        });
+    }
+}
+</file>
+
+<file path="model/filter/action/house/OldNewFilter.java">
+package ku.cs.project_SE.model.filter.action.house;
+
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.model.filter.action.EntityFilter;
+import ku.cs.project_SE.model.filter.specification.DropdownFilterDTO;
+import ku.cs.project_SE.model.filter.specification.SingleSelectionFilterDTO;
+import org.springframework.data.jpa.domain.Specification;
+
+import java.time.Year;
+
+public class OldNewFilter implements EntityFilter<House, DropdownFilterDTO> {
+    @Override
+    public Specification<House> toSpecification(DropdownFilterDTO specificationValue) {
+        return ((root, query, criteriaBuilder) -> {
+            String selectedChoice = specificationValue.selectedChoice();
+
+            // If no choice or empty, return all
+            if (selectedChoice == null || selectedChoice.isEmpty()) {
+                return criteriaBuilder.isTrue(criteriaBuilder.literal(true));
+            }
+
+            int currentYear = Year.now().getValue();
+
+            // "มือหนึ่ง" (new/first-hand) - houses built in current or previous year
+            if (selectedChoice.equals("มือหนึ่ง")) {
+                return criteriaBuilder.greaterThanOrEqualTo(root.get("yearBuilt"), currentYear - 1);
+            }
+            // "มือสอง" (used/second-hand) - houses built before previous year
+            else if (selectedChoice.equals("มือสอง")) {
+                return criteriaBuilder.lessThan(root.get("yearBuilt"), currentYear - 1);
+            }
+
+            // Default: return all
+            return criteriaBuilder.isTrue(criteriaBuilder.literal(true));
+        });
+    }
+}
+</file>
+
+<file path="model/filter/action/house/PriceRangeFilter.java">
+package ku.cs.project_SE.model.filter.action.house;
+
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.model.filter.action.EntityFilter;
+import ku.cs.project_SE.model.filter.specification.IntegerNumberRangeDTO;
+import org.springframework.data.jpa.domain.Specification;
+
+public class PriceRangeFilter implements EntityFilter<House, IntegerNumberRangeDTO> {
+    @Override
+    public Specification<House> toSpecification(IntegerNumberRangeDTO specificationValue) {
+        return ((root, query, criteriaBuilder) -> {
+            int value = specificationValue.value();
+
+            // If value is 0 or negative, return all
+            if (value <= 0) {
+                return criteriaBuilder.isTrue(criteriaBuilder.literal(true));
+            }
+
+            // Filter houses with price greater than or equal to the specified value
+            return criteriaBuilder.greaterThanOrEqualTo(root.get("price"), (double) value);
+        });
+    }
+}
+</file>
+
+<file path="model/filter/action/house/SortByFilter.java">
+package ku.cs.project_SE.model.filter.action.house;
+
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.model.filter.action.EntityFilter;
+import ku.cs.project_SE.model.filter.specification.SingleSelectionFilterDTO;
+import org.springframework.data.jpa.domain.Specification;
+
+public class SortByFilter implements EntityFilter<House, SingleSelectionFilterDTO> {
+    @Override
+    public Specification<House> toSpecification(SingleSelectionFilterDTO specificationValue) {
+        return ((root, query, criteriaBuilder) -> {
+            return criteriaBuilder.isTrue(criteriaBuilder.literal(true));
+        });
+    }
+}
+</file>
+
+<file path="model/filter/specification/DropdownFilterDTO.java">
+package ku.cs.project_SE.model.filter.specification;
+
+import org.json.JSONObject;
+
+import java.util.Objects;
+
+public final class DropdownFilterDTO implements SpecificationDataDTO {
+    private String selectedChoice;
+
+    public DropdownFilterDTO() {};
+
+    public DropdownFilterDTO(
+            String selectedChoice
+    ) {
+        this.selectedChoice = selectedChoice;
+    }
+
+    public String selectedChoice() {
+        return selectedChoice;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) return true;
+        if (obj == null || obj.getClass() != this.getClass()) return false;
+        var that = (DropdownFilterDTO) obj;
+        return Objects.equals(this.selectedChoice, that.selectedChoice);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(selectedChoice);
+    }
+
+    @Override
+    public String toString() {
+        return "DropdownFilterDTO[" +
+                "selectedChoice=" + selectedChoice + ']';
+    }
+
+    @Override
+    public void fromJSON(JSONObject filterData) {
+        this.selectedChoice = filterData.getString("selectedChoice");
+    }
+}
+</file>
+
+<file path="model/filter/specification/DropdownFilterSpecification.java">
+package ku.cs.project_SE.model.filter.specification;
+
+import org.json.JSONObject;
+
+import java.util.List;
+
+public class DropdownFilterSpecification implements FilterSpecification {
+    private final String filterSpecificationName;
+    private final List<String> filterChoices;
+
+    public DropdownFilterSpecification(String filterName, List<String> choices) {
+        this.filterSpecificationName = filterName;
+        this.filterChoices = choices;
+    }
+
+    @Override
+    public String getFilterSpecificationName() {
+        return filterSpecificationName;
+    }
+
+    @Override
+    public String getFilterSpecificationTypeName() {
+        return "DropdownFilter";
+    }
+
+    @Override
+    public JSONObject getFilterSpecificationJSON() {
+        JSONObject filterSpecificationJSON = new JSONObject();
+        filterSpecificationJSON.put("choices",this.filterChoices);
+        return filterSpecificationJSON;
+    }
+}
+</file>
+
+<file path="model/filter/specification/FilterSpecification.java">
+package ku.cs.project_SE.model.filter.specification;
+
+import org.json.JSONObject;
+
+import java.util.function.Predicate;
+
+public interface FilterSpecification {
+    String getFilterSpecificationName();
+    String getFilterSpecificationTypeName();
+    JSONObject getFilterSpecificationJSON();
+}
+</file>
+
+<file path="model/filter/specification/IntegerNumberRangeDTO.java">
+package ku.cs.project_SE.model.filter.specification;
+
+import org.json.JSONObject;
+
+import java.util.Objects;
+
+public final class IntegerNumberRangeDTO implements SpecificationDataDTO {
+    private int value;
+
+    public IntegerNumberRangeDTO(
+            int value
+    ) {
+        this.value = value;
+    }
+
+    public IntegerNumberRangeDTO() {}
+
+    public int value() {
+        return value;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) return true;
+        if (obj == null || obj.getClass() != this.getClass()) return false;
+        var that = (IntegerNumberRangeDTO) obj;
+        return this.value == that.value;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value);
+    }
+
+    @Override
+    public String toString() {
+        return "IntegerNumberRangeDTO[" +
+                "value=" + value + ']';
+    }
+
+    @Override
+    public void fromJSON(JSONObject filterData) {
+        this.value = filterData.optInt("value");
+    }
+}
+</file>
+
+<file path="model/filter/specification/IntegerNumberRangeSpecification.java">
+package ku.cs.project_SE.model.filter.specification;
+
+import org.json.JSONObject;
+
+public class IntegerNumberRangeSpecification implements FilterSpecification {
+    private final String filterSpecificationName;
+    private final int minValue;
+    private final int maxValue;
+    private final String minValueLabel;
+    private final String maxValueLabel;
+    private final String valueUnitName;
+    private final int defaultValue;
+
+    public IntegerNumberRangeSpecification(String filterSpecificationName, int defaultValue, int maxValue, int minValue, String minValueLabel, String maxValueLabel, String valueUnitName) {
+        this.filterSpecificationName = filterSpecificationName;
+        this.maxValue = maxValue;
+        this.minValue = minValue;
+        this.minValueLabel = minValueLabel;
+        this.maxValueLabel = maxValueLabel;
+        this.valueUnitName = valueUnitName;
+        this.defaultValue = defaultValue;
+    }
+
+    @Override
+    public String getFilterSpecificationName() {
+        return this.filterSpecificationName;
+    }
+
+    @Override
+    public String getFilterSpecificationTypeName() {
+        return "IntegerNumberRangeFilter";
+    }
+
+    @Override
+    public JSONObject getFilterSpecificationJSON() {
+        JSONObject filterSpecificationJSON = new JSONObject();
+        filterSpecificationJSON.put("filterSpecificationName", this.filterSpecificationName);
+        filterSpecificationJSON.put("defaultValue", this.defaultValue);
+        filterSpecificationJSON.put("minValue", this.minValue);
+        filterSpecificationJSON.put("maxValue", this.maxValue);
+        filterSpecificationJSON.put("minValueLabel", this.minValueLabel);
+        filterSpecificationJSON.put("maxValueLabel", this.maxValueLabel);
+        filterSpecificationJSON.put("valueUnitName", this.valueUnitName);
+        return filterSpecificationJSON;
+    }
+}
+</file>
+
+<file path="model/filter/specification/MultiSelectionDTO.java">
+package ku.cs.project_SE.model.filter.specification;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+public final class MultiSelectionDTO implements SpecificationDataDTO {
+    private List<String> selectedChoices;
+
+    public MultiSelectionDTO(
+            List<String> selectedChoices
+    ) {
+        this.selectedChoices = selectedChoices;
+    }
+
+    public MultiSelectionDTO() {}
+
+    public List<String> selectedChoices() {
+        return selectedChoices;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) return true;
+        if (obj == null || obj.getClass() != this.getClass()) return false;
+        var that = (MultiSelectionDTO) obj;
+        return Objects.equals(this.selectedChoices, that.selectedChoices);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(selectedChoices);
+    }
+
+    @Override
+    public String toString() {
+        return "MultiSelectionDTO[" +
+                "selectedChoices=" + selectedChoices + ']';
+    }
+
+    @Override
+    public void fromJSON(JSONObject filterData) {
+        this.selectedChoices = new ArrayList<>();
+        JSONArray selectedChoices = filterData.getJSONArray("selectedChoices");
+
+        for (int i = 0; i < selectedChoices.length(); i++) {
+            JSONObject choice = selectedChoices.getJSONObject(i);
+            String someValue = choice.getString("value");
+            this.selectedChoices.add(someValue);
+        }
+    }
+}
+</file>
+
+<file path="model/filter/specification/MultiSelectionFilterSpecification.java">
+package ku.cs.project_SE.model.filter.specification;
+
+import org.json.JSONObject;
+
+import java.util.List;
+
+public class MultiSelectionFilterSpecification implements FilterSpecification {
+    private final String filterSpecificationName;
+    private final List<String> filterChoices;
+    private final List<String> defaultChoices;
+
+    public MultiSelectionFilterSpecification(String filterName, List<String> choices, List<String> defaultChoices) {
+        this.filterSpecificationName = filterName;
+        this.filterChoices = choices;
+        this.defaultChoices = defaultChoices;
+    }
+
+    @Override
+    public String getFilterSpecificationName() {
+        return filterSpecificationName;
+    }
+
+    @Override
+    public String getFilterSpecificationTypeName() {
+        return "MultiSelectionFilter";
+    }
+
+    @Override
+    public JSONObject getFilterSpecificationJSON() {
+        JSONObject filterSpecificationJSON = new JSONObject();
+        filterSpecificationJSON.put("choices",this.filterChoices);
+        filterSpecificationJSON.put("defaultChoices",this.defaultChoices);
+        return filterSpecificationJSON;
+    }
+}
+</file>
+
+<file path="model/filter/specification/SingleSelectionFilterDTO.java">
+package ku.cs.project_SE.model.filter.specification;
+
+import org.json.JSONObject;
+
+import java.util.Objects;
+
+public final class SingleSelectionFilterDTO implements SpecificationDataDTO {
+    private String selectedChoices;
+
+    public SingleSelectionFilterDTO(
+            String selectedChoices
+    ) {
+        this.selectedChoices = selectedChoices;
+    }
+
+    public SingleSelectionFilterDTO(){};
+
+    public String selectedChoices() {
+        return selectedChoices;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) return true;
+        if (obj == null || obj.getClass() != this.getClass()) return false;
+        var that = (SingleSelectionFilterDTO) obj;
+        return Objects.equals(this.selectedChoices, that.selectedChoices);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(selectedChoices);
+    }
+
+    @Override
+    public String toString() {
+        return "SingleSelectionFilterDTO[" +
+                "selectedChoices=" + selectedChoices + ']';
+    }
+
+    @Override
+    public void fromJSON(JSONObject filterData) {
+
+    }
+}
+</file>
+
+<file path="model/filter/specification/SingleSelectionFilterSpecification.java">
+package ku.cs.project_SE.model.filter.specification;
+
+import org.json.JSONObject;
+
+import java.util.List;
+
+public class SingleSelectionFilterSpecification implements FilterSpecification {
+    private final String filterSpecificationName;
+    private final List<String> filterChoices;
+
+    public SingleSelectionFilterSpecification(String filterName, List<String> choices) {
+        this.filterSpecificationName = filterName;
+        this.filterChoices = choices;
+    }
+
+    @Override
+    public String getFilterSpecificationName() {
+        return filterSpecificationName;
+    }
+
+    @Override
+    public String getFilterSpecificationTypeName() {
+        return "SingleSelectionFilter";
+    }
+
+    @Override
+    public JSONObject getFilterSpecificationJSON() {
+        JSONObject filterSpecificationJSON = new JSONObject();
+        filterSpecificationJSON.put("choices",this.filterChoices);
+        return filterSpecificationJSON;
+    }
+}
+</file>
+
+<file path="model/filter/specification/SpecificationDataDTO.java">
+package ku.cs.project_SE.model.filter.specification;
+
+import org.json.JSONObject;
+
+public interface SpecificationDataDTO {
+    void fromJSON(JSONObject filterData);
+}
+</file>
+
+<file path="ProjectSeApplication.java">
+package ku.cs.project_SE;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ProjectSeApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ProjectSeApplication.class, args);
+	}
+
+}
+</file>
+
+<file path="repository/CompositeConditionRepository.java">
+// keam
+package ku.cs.project_SE.repository;
+
+import ku.cs.project_SE.entity.promotion.promotion_condition.conditions.CompositeCondition;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface CompositeConditionRepository extends JpaRepository<CompositeCondition, Long> {
+    List<CompositeCondition> findByPromotion_PromotionId(String promotionId);
+    void deleteByPromotion_PromotionId(String promotionId);
+}
+</file>
+
+<file path="repository/HouseRegisterRepository.java">
+package ku.cs.project_SE.repository;
+
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.entity.house_register.HouseRegister;
+import ku.cs.project_SE.entity.house_register.HouseRegisterId;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Date;
+
+public interface HouseRegisterRepository extends JpaRepository<HouseRegister, HouseRegisterId> {
+
+}
+</file>
+
+<file path="repository/HouseRenovateRepository.java">
+// keam
+package ku.cs.project_SE.repository;
+
+import ku.cs.project_SE.entity.house.HouseRenovate;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface HouseRenovateRepository extends JpaRepository<HouseRenovate, Long> {
+    Optional<HouseRenovate> findByHouse_HouseId(Long houseId);
+}
+</file>
+
+<file path="repository/HouseRentalRepository.java">
+// keam
+package ku.cs.project_SE.repository;
+
+import ku.cs.project_SE.entity.house.HouseRental;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface HouseRentalRepository extends JpaRepository<HouseRental, Long> {
+    Optional<HouseRental> findByHouse_HouseId(Long houseId);
+}
+</file>
+
+<file path="repository/HouseRepository.java">
+// keam
+package ku.cs.project_SE.repository;
+
+import ku.cs.project_SE.entity.house.House;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
+public interface HouseRepository extends JpaRepository<House, Long>, JpaSpecificationExecutor<House> {
+    Page<House> findByProject_ProjectNameContainingIgnoreCaseOrCaptionContainingIgnoreCaseOrDescriptionContainingIgnoreCase(
+            String projectName, String caption, String description, Pageable pageable
+    );
+
+    List<House> findHousesByOwner_UserId(UUID userId);
+}
+</file>
+
+<file path="repository/HouseRequestRepository.java">
+package ku.cs.project_SE.repository;
+
+import ku.cs.project_SE.entity.house.HouseRequest;
+import ku.cs.project_SE.enums.house.HouseStatus;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+import java.util.UUID;
+
+public interface HouseRequestRepository extends JpaRepository<HouseRequest, UUID> {
+    List<HouseRequest>findHouseRequestsByRequester_UserId(UUID ownerId);
+    List<HouseRequest> findByStatusOrStatus(HouseStatus status1, HouseStatus status2);
+}
+</file>
+
+<file path="repository/ImageRepository.java">
+// keam
+package ku.cs.project_SE.repository;
+
+import ku.cs.project_SE.entity.image.Image;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ImageRepository extends JpaRepository<Image, Long> {
+}
+</file>
+
+<file path="repository/ProjectRepository.java">
+// keam
+package ku.cs.project_SE.repository;
+
+import ku.cs.project_SE.entity.project.Project;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProjectRepository extends JpaRepository<Project, String> {
+
+            void deleteByProjectName(String projectName);
+}
+</file>
+
+<file path="repository/promotion/FixedAmountDiscountActionRepository.java">
+package ku.cs.project_SE.repository.promotion;
+
+import ku.cs.project_SE.entity.promotion.promotion_action.FixedAmountDiscountAction;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface FixedAmountDiscountActionRepository extends JpaRepository<FixedAmountDiscountAction, String> {
+    Optional<FixedAmountDiscountAction> findByPromotion_PromotionId(String promotionId);
+    void deleteByPromotion_PromotionId(String promotionId);
+}
+</file>
+
+<file path="repository/promotion/GiftActionRepository.java">
+package ku.cs.project_SE.repository.promotion;
+
+import ku.cs.project_SE.entity.promotion.promotion_action.GiftAction;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface GiftActionRepository extends JpaRepository<GiftAction, String> {
+    Optional<GiftAction> findByPromotion_PromotionId(String promotionId);
+    void deleteByPromotion_PromotionId(String promotionId);
+}
+</file>
+
+<file path="repository/promotion/PercentageDiscountActionRepository.java">
+package ku.cs.project_SE.repository.promotion;
+
+import ku.cs.project_SE.entity.promotion.promotion_action.PercentageDiscountAction;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface PercentageDiscountActionRepository extends JpaRepository<PercentageDiscountAction, String> {
+    Optional<PercentageDiscountAction> findByPromotion_PromotionId(String promotionId);
+    void deleteByPromotion_PromotionId(String promotionId);
+}
+</file>
+
+<file path="repository/PromotionRepository.java">
+package ku.cs.project_SE.repository;
+
+import ku.cs.project_SE.entity.promotion.Promotion;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+public interface PromotionRepository extends JpaRepository<Promotion, String > {
+    @Query("""
+        select p
+        from Promotion p
+        where (:q is null or :q = '')
+           or lower(p.promotionName) like lower(concat('%', :q, '%'))
+           or lower(p.description) like lower(concat('%', :q, '%'))
+           or str(p.promotionId) like concat('%', :q, '%')
+    """)
+    Page<Promotion> search(@Param("q") String q, Pageable pageable);
+
+    @Query("""
+    select p
+    from Promotion p
+    where
+      ( :q is null or :q = ''
+        or lower(p.promotionName) like lower(concat('%', :q, '%'))
+        or lower(p.description)   like lower(concat('%', :q, '%'))
+        or str(p.promotionId)     like concat('%', :q, '%')
+      )
+      and ( :active is null or p.isActive = :active )
+""")
+    Page<Promotion> searchWithFilter(@Param("q") String q,
+                                     @Param("active") Boolean active,
+                                     Pageable pageable);
+}
+</file>
+
+<file path="repository/UserRepository.java">
+package ku.cs.project_SE.repository;
+
+import ku.cs.project_SE.entity.user.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+import java.util.UUID;
+//Tee
+public interface UserRepository extends JpaRepository<User, UUID> {
+    Optional<User> findByEmailOrPhoneNumber(String email,String phoneNumber);
+    Optional<User> findByEmail(String email);
+    Optional<User> findByPhoneNumber(String phoneNumber);
+    Boolean existsByEmail(String username);
+}
+</file>
+
+<file path="security/JwtAuthenticationFilter.java">
+package ku.cs.project_SE.security;
+
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import ku.cs.project_SE.entity.user.User;
+import ku.cs.project_SE.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.jwt.Jwt;
+import org.springframework.security.oauth2.jwt.JwtDecoder;
+import org.springframework.stereotype.Component;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+import java.io.IOException;
+import java.util.Collections;
+import java.util.List;
+import java.util.UUID;
+
+@Component
+public class JwtAuthenticationFilter extends OncePerRequestFilter {
+
+    private final JwtDecoder jwtDecoder;
+    private final UserService userService;
+
+
+    @Autowired
+    public JwtAuthenticationFilter(JwtDecoder jwtDecoder, UserService userService) {
+
+        this.jwtDecoder = jwtDecoder;
+        this.userService = userService;
+    }
+    @Override
+    protected void doFilterInternal(HttpServletRequest request,
+                                    HttpServletResponse response,
+                                    FilterChain filterChain) throws ServletException, IOException {
+
+        String path = request.getRequestURI();
+
+        if (path.startsWith("/api/auth/")) {
+            filterChain.doFilter(request, response);
+            return;
+        }
+
+        String authHeader = request.getHeader("Authorization");
+        if (authHeader != null && authHeader.startsWith("Bearer ")) {
+            String token = authHeader.substring(7);
+
+            try {
+                Jwt jwt = jwtDecoder.decode(token);
+                String userIdStr = jwt.getSubject();
+                UUID userId = UUID.fromString(userIdStr);
+
+                User user = userService.findById(userId);
+                UsernamePasswordAuthenticationToken authentication =
+                        new UsernamePasswordAuthenticationToken(
+                                user,
+                                null,
+                                Collections.singletonList(new SimpleGrantedAuthority("ROLE_" + user.getRole().name()))
+                        );
+
+                SecurityContextHolder.getContext().setAuthentication(authentication);
+
+            } catch (Exception e) {
+                response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Invalid JWT: " + e.getMessage());
+                return;
+            }
+        }
+
+        filterChain.doFilter(request, response);
+    }
+}
+</file>
+
+<file path="security/JWTConfig.java">
+package ku.cs.project_SE.security;
+
+import com.nimbusds.jose.jwk.source.ImmutableSecret;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.oauth2.jwt.JwtDecoder;
+import org.springframework.security.oauth2.jwt.JwtEncoder;
+import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
+import org.springframework.security.oauth2.jwt.NimbusJwtEncoder;
+
+import javax.crypto.spec.SecretKeySpec;
+import java.nio.charset.StandardCharsets;
+
+@Configuration
+public class JWTConfig {
+    private final String secret = "my-super-secret-key-which-should-be-longerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr";
+
+    @Bean
+    public JwtEncoder jwtEncoder() {
+        SecretKeySpec key = new SecretKeySpec(secret.getBytes(StandardCharsets.UTF_8), "HmacSHA256");
+        return new NimbusJwtEncoder(new ImmutableSecret<>(key));
+    }
+
+    @Bean
+    public JwtDecoder jwtDecoder() {
+        SecretKeySpec key = new SecretKeySpec(secret.getBytes(StandardCharsets.UTF_8), "HmacSHA256");
+        return NimbusJwtDecoder.withSecretKey(key).build();
+    }
+}
+</file>
+
+<file path="security/SecurityConfig.java">
+package ku.cs.project_SE.security;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
+import java.util.Arrays;
+
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+    private final UserDetailsService userDetailsService;
+
+
+    public SecurityConfig(UserDetailsService userDetailsService) {
+        this.userDetailsService = userDetailsService;
+    }
+//
+//    @Bean
+//    public PasswordEncoder passwordEncoder() {
+//        return new BCryptPasswordEncoder();
+//    }
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http, JwtAuthenticationFilter jwtAuthFilter) throws Exception {
+        http
+                .csrf(csrf -> csrf.disable())
+                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/images/**").permitAll()
+                        .requestMatchers("/admin/**").hasRole("ADMIN")
+//                        .requestMatchers("/admin/**").permitAll()
+                        .requestMatchers("/auth/**").permitAll()
+                        .requestMatchers("/api/auth/signup").permitAll()
+                        .requestMatchers("/test/accessible").permitAll()
+                        .requestMatchers("/houses/**").permitAll()
+                        .requestMatchers("/project").permitAll()
+                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-ui.html").permitAll()
+                        .anyRequest().authenticated()
+                )
+                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
+//                .formLogin(login -> login
+//                        .loginProcessingUrl("/api/auth/login")
+////                        .loginPage("")
+//                        .permitAll()
+//                )
+                .logout(logout -> logout
+                        .logoutUrl("/api/auth/logout")
+                        .permitAll()
+                );
+        return http.build();
+    }
+
+    @Bean
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
+        return config.getAuthenticationManager();
+    }
+
+    @Bean
+    public DaoAuthenticationProvider authProvider(PasswordEncoder passwordEncoder) {
+        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
+        authProvider.setUserDetailsService(userDetailsService);
+        authProvider.setPasswordEncoder(passwordEncoder);
+        return authProvider;
+    }
+
+    // TODO : DO NOT USE * IN REAL PRODUCTION STONK
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOriginPatterns(Arrays.asList("*"));
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        configuration.setAllowedHeaders(Arrays.asList("*"));
+        configuration.setAllowCredentials(true);
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
+    }
+
+}
+</file>
+
+<file path="service/ActionResolverService.java">
+package ku.cs.project_SE.service;
+
+import ku.cs.project_SE.entity.promotion.Promotion;
+import ku.cs.project_SE.entity.promotion.promotion_action.FixedAmountDiscountAction;
+import ku.cs.project_SE.entity.promotion.promotion_action.GiftAction;
+import ku.cs.project_SE.entity.promotion.promotion_action.PercentageDiscountAction;
+import ku.cs.project_SE.entity.promotion.promotion_action.PromotionAction;
+import ku.cs.project_SE.repository.promotion.FixedAmountDiscountActionRepository;
+import ku.cs.project_SE.repository.promotion.GiftActionRepository;
+import ku.cs.project_SE.repository.promotion.PercentageDiscountActionRepository;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+@Service
+@Transactional(readOnly = true)
+public class ActionResolverService {
+
+    private final PercentageDiscountActionRepository pctRepo;
+    private final FixedAmountDiscountActionRepository fixedRepo;
+    private final GiftActionRepository giftRepo;
+
+    public ActionResolverService(PercentageDiscountActionRepository pctRepo,
+                                 FixedAmountDiscountActionRepository fixedRepo,
+                                 GiftActionRepository giftRepo) {
+        this.pctRepo = pctRepo;
+        this.fixedRepo = fixedRepo;
+        this.giftRepo = giftRepo;
+    }
+
+    public PromotionAction resolve(Promotion promotion) {
+        if (promotion == null) return null;
+        String id = promotion.getPromotionId();
+        PercentageDiscountAction p = pctRepo.findByPromotion_PromotionId(id).orElse(null);
+        if (p != null) return p;
+        FixedAmountDiscountAction f = fixedRepo.findByPromotion_PromotionId(id).orElse(null);
+        if (f != null) return f;
+        GiftAction g = giftRepo.findByPromotion_PromotionId(id).orElse(null);
+        return g;
+    }
+}
+</file>
+
+<file path="service/AuthService.java">
+package ku.cs.project_SE.service;
+
+import ku.cs.project_SE.dto.auth.LoginRequestDto;
+import ku.cs.project_SE.dto.auth.RegisterRequestDto;
+import ku.cs.project_SE.entity.user.User;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+@Service
+public class AuthService {
+
+    private final AuthenticationManager authManager;
+    private final JWTService jwtService;
+    private final UserService userService;
+
+    public AuthService(AuthenticationManager authManager,JWTService jwtService, UserService userService) {
+        this.authManager = authManager;
+        this.jwtService = jwtService;
+        this.userService = userService;
+    }
+
+    @Transactional
+    public String login(LoginRequestDto request) {
+        Authentication auth = authManager.authenticate(
+                new UsernamePasswordAuthenticationToken(request.identifier(), request.password())
+        );
+        System.out.println("Authentication token: " + auth.getName());
+        User user = userService.findByEmail(auth.getName())
+                .orElseThrow(() -> new BadCredentialsException("User not found"));
+        return jwtService.generateToken(user);
+    }
+}
+</file>
+
+<file path="service/HouseCommandService.java">
+// ku/cs/project_SE/service/HouseService.java
+package ku.cs.project_SE.service;
+
+import jakarta.transaction.Transactional;
+import ku.cs.project_SE.dto.house.*;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.entity.house.HouseRenovate;
+import ku.cs.project_SE.entity.house.HouseRental;
+import ku.cs.project_SE.entity.image.Image;
+import ku.cs.project_SE.entity.project.Project;
+import ku.cs.project_SE.entity.user.Role;
+import ku.cs.project_SE.entity.user.User;
+import ku.cs.project_SE.enums.house.HouseStatus;
+import ku.cs.project_SE.mapper.HouseMapper;
+import ku.cs.project_SE.repository.HouseRenovateRepository;
+import ku.cs.project_SE.repository.HouseRentalRepository;
+import ku.cs.project_SE.repository.HouseRepository;
+import ku.cs.project_SE.repository.ImageRepository;
+import ku.cs.project_SE.repository.ProjectRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+@Service
+//Tee
+public class HouseCommandService {
+
+    private final HouseRepository houseRepository;
+    private final HouseMapper houseMapper;
+    private final ImageRepository imageRepository;
+    private final ProjectRepository projectRepository;
+    private final HouseRentalRepository houseRentalRepository;
+    private final HouseRenovateRepository houseRenovateRepository;
+
+    public HouseCommandService(HouseRepository houseRepository, HouseMapper houseMapper,
+                               ImageRepository imageRepository, ProjectRepository projectRepository,
+                               HouseRentalRepository houseRentalRepository, HouseRenovateRepository houseRenovateRepository) {
+        this.houseRepository = houseRepository;
+        this.houseMapper = houseMapper;
+        this.imageRepository = imageRepository;
+        this.projectRepository = projectRepository;
+        this.houseRentalRepository = houseRentalRepository;
+        this.houseRenovateRepository = houseRenovateRepository;
+    }
+
+    public House createHouseFromAdmin(HouseCreateAdminDto adminDto, User adminUser) {
+        House house = houseMapper.createByAdminToEntity(adminDto);
+        house.setHouseStatus(HouseStatus.APPROVED);
+
+        return finalizeAndSaveHouse(house, adminUser, adminDto.imageId(), adminDto.projectName());
+    }
+
+    public House createHouseFromInvestor(HouseCreateInvestorDto investorDto, User investorUser) {
+        House house = houseMapper.createByInvestorToEntity(investorDto);
+        house.setHouseStatus(HouseStatus.PENDING); // สถานะสำหรับ Investor คือรอดำเนินการ
+        return finalizeAndSaveHouse(house, investorUser, investorDto.imageId(), investorDto.purposedProjectName());
+    }
+
+    private House finalizeAndSaveHouse(House house, User owner, List<Long> imageIds, String projectNameStr) {
+        house.setOwner(owner);
+
+        if (projectNameStr != null && !projectNameStr.isEmpty()) {
+            Project realProject = projectRepository.findById(projectNameStr)
+                    .orElseThrow(() -> new IllegalArgumentException("Project not found: " + projectNameStr));
+            house.setProject(realProject);
+        }
+
+        if (imageIds != null && !imageIds.isEmpty()) {
+            Set<Image> realImages = new HashSet<>(imageRepository.findAllById(imageIds));
+            if (realImages.size() != imageIds.size()) {
+                throw new IllegalArgumentException("One or more images not found.");
+            }
+            house.setImages(realImages);
+        }
+
+        if (house.getAddress() != null) {
+            house.getAddress().setId(null); // บังคับให้สร้าง Address ใหม่เสมอ
+        }
+
+        return houseRepository.save(house);
+    }
+
+    public Boolean editHouse(HouseEditAdminRequestDto dto, long id) {
+        House house = houseRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("House not found: id=" + id));
+        houseMapper.updateEntityFromEdit(dto,house);
+
+        // Fetch real Project entity from database
+        if (house.getProject() != null && house.getProject().getProjectName() != null) {
+            Project realProject = projectRepository.findById(house.getProject().getProjectName())
+                    .orElseThrow(() -> new IllegalArgumentException("Project not found: " + house.getProject().getProjectName()));
+            house.setProject(realProject);
+        }
+
+        // Fetch real Image entities from database
+        if (house.getImages() != null && !house.getImages().isEmpty()) {
+            Set<Image> realImages = new HashSet<>();
+            for (Image image : house.getImages()) {
+                if (image.getImageId() != null) {
+                    Image realImage = imageRepository.findById(image.getImageId())
+                            .orElseThrow(() -> new IllegalArgumentException("Image not found: " + image.getImageId()));
+                    realImages.add(realImage);
+                }
+            }
+            house.setImages(realImages);
+        }
+
+        // Handle Address detached entity issue during edit
+        if (house.getAddress() != null && house.getAddress().getId() != null) {
+            // During edit, check if we need to create a new address or update existing
+            house.getAddress().setId(null);
+        }
+
+        houseRepository.save(house);
+        return true;
+
+    }
+
+    public Boolean deleteHouse(Long houseId) {
+        houseRepository.delete(houseRepository.findById(houseId).orElseThrow(() -> new IllegalArgumentException("House not found: " + houseId)));
+        return true;
+    }
+
+    @Transactional
+    public boolean updateRentalData(Long houseId, RentalDto dto) {
+        House house = houseRepository.findById(houseId)
+                .orElseThrow(() -> new IllegalArgumentException("House not found: id=" + houseId));
+
+        HouseRental rental = houseRentalRepository.findByHouse_HouseId(houseId)
+                .orElseGet(() -> {
+                    HouseRental r = new HouseRental();
+                    r.setHouse(house);
+                    return r;
+                });
+
+        rental.setRentalYield(dto.rentalYield());
+        rental.setPropertyTax(dto.propertyTax());
+        rental.setMaintenanceCost(dto.maintenanceCost());
+        rental.setAdditionalData(dto.additionalData());
+
+        houseRentalRepository.save(rental);
+        return true;
+    }
+
+    @Transactional
+    public Boolean updateRenovateData(Long houseId, RenovateDto dto) {
+        House house = houseRepository.findById(houseId)
+                .orElseThrow(() -> new IllegalArgumentException("House not found: id=" + houseId));
+
+        HouseRenovate renovate = houseRenovateRepository.findByHouse_HouseId(houseId)
+                .orElseGet(() -> {
+                    HouseRenovate v = new HouseRenovate();
+                    v.setHouse(house);
+                    return v;
+                });
+
+        renovate.setInnovateCost(dto.innovateCost());
+        renovate.setLawInformation(dto.lawInformation());
+        renovate.setStructure(dto.structure());
+        renovate.setAdditionalData(dto.additionalData());
+
+        houseRenovateRepository.save(renovate);
+        return true;
+    }
+}
+</file>
+
+<file path="service/HouseRegisterService.java">
+package ku.cs.project_SE.service;
+
+import ku.cs.project_SE.dto.house.HouseDetailDto;
+import ku.cs.project_SE.dto.house_register.HouseRegisterRespondDto;
+import ku.cs.project_SE.dto.user.UserRespondDto;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.entity.house_register.HouseRegister;
+import ku.cs.project_SE.entity.house_register.HouseRegisterId;
+import ku.cs.project_SE.entity.user.User;
+import ku.cs.project_SE.mapper.HouseMapper;
+import ku.cs.project_SE.mapper.UserMapper;
+import ku.cs.project_SE.repository.HouseRegisterRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.UUID;
+
+@Service
+public class HouseRegisterService {
+
+    private HouseRegisterRepository houseRegisterRepository;
+    private UserService userService;
+    private HouseService houseService;
+    private UserMapper userMapper;
+    private HouseMapper houseMapper;
+
+    public HouseRegisterService(HouseRegisterRepository houseRegisterRepository, UserService userService, HouseService houseService,HouseMapper houseMapper, UserMapper userMapper) {
+        this.houseRegisterRepository = houseRegisterRepository;
+        this.userService = userService;
+        this.houseService = houseService;
+        this.houseMapper = houseMapper;
+        this.userMapper = userMapper;
+
+    }
+
+    public HouseRegister createHouseRegister(long houseId, UUID userId) {
+        HouseRegisterId registerId = new HouseRegisterId(userId, houseId);
+        User user = userService.findById(userId);
+        House house = houseService.findHouseById(houseId);
+        HouseRegister houseRegister = HouseRegister.builder()
+                .id(registerId)
+                .user(user)
+                .house(house)
+                .build();
+
+        return houseRegisterRepository.save(houseRegister);
+    }
+
+    public HouseRegister findHouseRegisterById(HouseRegisterId id) {
+        return houseRegisterRepository.findById(id).orElse(null);
+    }
+
+    public List<HouseRegisterRespondDto> getAllHouseRegisterDto() {
+        List<HouseRegister> houseRegisters = houseRegisterRepository.findAll();
+
+        return houseRegisters.stream()
+                .map(hr -> getHouseRegisterDtoById(hr.getUser().getUserId(), hr.getHouse().getHouseId()))
+                .toList();
+    }
+
+    public HouseRegisterRespondDto getHouseRegisterDtoById(UUID userId,long houseId) {
+        HouseRegisterId registerId = new HouseRegisterId(userId, houseId);
+        HouseRegister houseRegister = this.findHouseRegisterById(registerId);
+        User user = houseRegister.getUser();
+        UserRespondDto userDTO = userMapper.toDto(user);
+        HouseDetailDto houseDetailDto = houseMapper.toDetail(houseRegister.getHouse());
+        return new HouseRegisterRespondDto(houseDetailDto,userDTO);
+    }
+}
+</file>
+
+<file path="service/HouseRequestService.java">
+package ku.cs.project_SE.service;
+
+import ku.cs.project_SE.dto.admin.ApproveHouseRequestDto;
+import ku.cs.project_SE.dto.admin.RejectHouseRequestDto;
+import ku.cs.project_SE.dto.house.HouseRequestDto;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.entity.house.HouseRequest;
+import ku.cs.project_SE.entity.user.Role;
+import ku.cs.project_SE.entity.user.User;
+import ku.cs.project_SE.enums.house.HouseStatus;
+import ku.cs.project_SE.mapper.HouseRequestMapper;
+import ku.cs.project_SE.repository.HouseRequestRepository;
+import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
+//Tee
+@Service
+public class HouseRequestService {
+    HouseRequestRepository houseRequestRepository;
+    HouseRequestMapper houseRequestMapper;
+
+    public HouseRequestService(HouseRequestRepository houseRequestRepository, HouseRequestMapper houseRequestMapper) {
+        this.houseRequestRepository = houseRequestRepository;
+        this.houseRequestMapper = houseRequestMapper;
+    }
+
+    public Boolean CreateHouseRequest(House house, User user) {
+        HouseRequest houseRequest = new HouseRequest();
+        houseRequest.setHouse(house);
+        houseRequest.setRequester(user);
+        if (user.getRole().equals(Role.INVESTOR)) houseRequest.setStatus(HouseStatus.PENDING);
+        else if (user.getRole().equals(Role.ADMIN)) houseRequest.setStatus(HouseStatus.APPROVED);
+
+        houseRequest.setSubmittedAt(LocalDateTime.now());
+
+        this.houseRequestRepository.save(houseRequest);
+        return true;
+    }
+
+    public  List<HouseRequestDto> getHouseRequestByOwner(UUID userId) {
+        List<HouseRequest> houseRequests = this.houseRequestRepository.findHouseRequestsByRequester_UserId(userId);
+        List<HouseRequestDto> houseRequestDtos = new ArrayList<>();
+        for (HouseRequest houseRequest : houseRequests) {
+            HouseRequestDto houseRequestDto = houseRequestMapper.toDto(houseRequest);
+            houseRequestDtos.add(houseRequestDto);
+        }
+        return houseRequestDtos;
+    }
+
+    public List<HouseRequestDto> getPendingAndModifiedRequests() {
+        List<HouseRequest> houseRequests = houseRequestRepository.findByStatusOrStatus(HouseStatus.PENDING,HouseStatus.MODIFIED);
+        List<HouseRequestDto> houseRequestDtos = new ArrayList<>();
+        for (HouseRequest houseRequest : houseRequests) {
+            HouseRequestDto houseRequestDto = houseRequestMapper.toDto(houseRequest);
+            houseRequestDtos.add(houseRequestDto);
+        }
+        return houseRequestDtos;
+    }
+
+    public List<HouseRequestDto> getApprovedOrRejectedRequest() {
+        List<HouseRequest> houseRequests = houseRequestRepository.findByStatusOrStatus(HouseStatus.APPROVED,HouseStatus.REJECTED);
+        List<HouseRequestDto> houseRequestDtos = new ArrayList<>();
+        for (HouseRequest houseRequest : houseRequests) {
+            HouseRequestDto houseRequestDto = houseRequestMapper.toDto(houseRequest);
+            houseRequestDtos.add(houseRequestDto);
+        }
+        return houseRequestDtos;
+    }
+
+    public void approve(ApproveDto dto, User user) {
+        HouseRequest houseRequest = houseRequestRepository.findById(dto.requestId()).orElseThrow();
+        houseRequest.setStatus(HouseStatus.APPROVED);
+        houseRequest.getHouse().setHouseStatus(HouseStatus.APPROVED);
+        houseRequestRepository.save(houseRequest);
+    }
+
+    public void reject(RejectDto dto, User user) {
+        HouseRequest houseRequest = houseRequestRepository.findById(dto.requestId()).orElseThrow();
+        houseRequest.setStatus(HouseStatus.REJECTED);
+        houseRequest.getHouse().setHouseStatus(HouseStatus.REJECTED);
+        houseRequestRepository.save(houseRequest);
+    }
+}
+</file>
+
+<file path="service/HouseService.java">
+package ku.cs.project_SE.service;
+
+import ku.cs.project_SE.dto.FilterDTO;
+import ku.cs.project_SE.dto.PageResponseDto;
+import ku.cs.project_SE.dto.house.HouseDetailDto;
+import ku.cs.project_SE.dto.house.HouseSearchFilterRequestDto;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.factory.house_filter.HouseFilterFactory;
+import ku.cs.project_SE.mapper.HouseMapper;
+import ku.cs.project_SE.model.filter.specification.FilterSpecification;
+import ku.cs.project_SE.repository.HouseRepository;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.springframework.data.domain.*;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+
+@Service
+@Transactional(readOnly = true)
+public class HouseService {
+
+    private final HouseRepository houseRepository;
+    private final HouseMapper houseMapper;
+    private final SpecificationComposer specificationComposer;
+
+    public HouseService(HouseRepository houseRepository, HouseMapper houseMapper, SpecificationComposer specificationComposer) {
+        this.houseRepository = houseRepository;
+        this.houseMapper = houseMapper;
+        this.specificationComposer = specificationComposer;
+    }
+
+    public PageResponseDto<HouseDetailDto> searchHouses(String query, int page, int pageSize) {
+        return searchHouses(query, page, pageSize, null);
+    }
+
+    public PageResponseDto<HouseDetailDto> searchHouses(String query, int page, int pageSize, HouseSearchFilterRequestDto filterRequest) {
+        int pageIndex = Math.max(0, page - 1);
+        Pageable pageable = PageRequest.of(pageIndex, pageSize, Sort.by(Sort.Direction.DESC, "houseId"));
+
+        // Compose specifications from query and filters
+        Specification<House> specification = specificationComposer.composeSearchAndFilters(query, filterRequest);
+
+        Page<House> resultPage;
+        if (specification == null) {
+            // No filters or query - return all
+            resultPage = houseRepository.findAll(pageable);
+        } else {
+            // Apply combined specification
+            resultPage = houseRepository.findAll(specification, pageable);
+        }
+
+        List<HouseDetailDto> items = resultPage.getContent()
+                .stream()
+                .map(houseMapper::toDetail)
+                .toList();
+
+        return new PageResponseDto<>(
+                items,
+                page,
+                pageSize,
+                resultPage.getTotalElements(),
+                resultPage.getTotalPages()
+        );
+    }
+
+    public HouseDetailDto getHouseById(Long id) {
+        House house = houseRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("House not found: id=" + id));
+        return houseMapper.toDetail(house);
+    }
+
+    public FilterDTO getHouseFilterSpecifications(){
+        HouseFilterFactory houseFilterFactory = new HouseFilterFactory();
+        List<FilterSpecification> filterSpecificationList = houseFilterFactory.getHouseFilterSpecifications();
+
+        List<Map<String, Object>> filters = new ArrayList<>();
+        for (FilterSpecification filterSpecification : filterSpecificationList) {
+            JSONObject jsonObject = filterSpecification.getFilterSpecificationJSON();
+            filters.add(jsonObject.toMap());
+        }
+
+        return new FilterDTO(filters.size(), filters);
+    }
+
+    public House findHouseById(Long id) {
+        return houseRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("House not found: id=" + id));
+    }
+
+
+
+}
+</file>
+
+<file path="service/ImageService.java">
+//keam
+package ku.cs.project_SE.service;
+
+import ku.cs.project_SE.dto.image.ImageDto;
+import ku.cs.project_SE.entity.image.Image;
+import ku.cs.project_SE.mapper.ImageMapper;
+import ku.cs.project_SE.repository.ImageRepository;
+import ku.cs.project_SE.service.S3.S3PresignService;
+import ku.cs.project_SE.service.S3.S3StorageService;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.server.ResponseStatusException;
+
+import java.time.Duration;
+
+import static org.springframework.http.HttpStatus.*;
+
+@Service
+@Transactional(readOnly = true)
+public class ImageService {
+
+    private final ImageRepository repository;
+    private final ImageMapper mapper;
+    private final S3StorageService s3;
+    private final S3PresignService presign;
+
+    public ImageService(ImageRepository repository,
+                        ImageMapper mapper,
+                        S3StorageService s3,
+                        S3PresignService presign) {
+        this.repository = repository;
+        this.mapper = mapper;
+        this.s3 = s3;
+        this.presign = presign;
+    }
+
+    public Image getById(Long id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Image not found: " + id));
+    }
+
+    public ImageDto getImage(Long id) {
+        var img = getById(id);
+        var dto = mapper.toDto(img);
+        dto.setUrl(presign.presignGetUrl(img.getImagePath(), Duration.ofMinutes(10)));
+        return dto;
+    }
+
+    @Transactional
+    public ImageDto upload(MultipartFile file) {
+        if (file == null || file.isEmpty()) {
+            throw new ResponseStatusException(BAD_REQUEST, "Empty file");
+        }
+        var uploaded = s3.upload(file, "");
+        Image saved = repository.save(new Image(null, uploaded.key()));
+        var dto = mapper.toDto(saved);
+        dto.setUrl(presign.presignGetUrl(saved.getImagePath(), Duration.ofMinutes(10)));
+        return dto;
+    }
+
+    @Transactional
+    public void delete(Long id) {
+        var img = getById(id);
+        s3.delete(img.getImagePath());
+        repository.delete(img);
+    }
+}
+</file>
+
+<file path="service/JWTService.java">
+package ku.cs.project_SE.service;
+
+import ku.cs.project_SE.entity.user.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.oauth2.jose.jws.MacAlgorithm;
+import org.springframework.security.oauth2.jwt.*;
+import org.springframework.stereotype.Service;
+
+import java.time.Instant;
+//Tee
+@Service
+public class JWTService {
+
+    private final JwtEncoder jwtEncoder;
+
+    @Autowired
+    public JWTService(JwtEncoder jwtEncoder) {
+        this.jwtEncoder = jwtEncoder;
+    }
+
+    public String generateToken(User user) {
+        Instant now = Instant.now();
+        JwtClaimsSet claims = JwtClaimsSet.builder()
+                .subject(user.getUserId().toString())
+                .issuedAt(now)
+                .expiresAt(now.plusSeconds(3600))
+                .claim("role", user.getRole().name())
+                .build();
+
+        JwsHeader jwsHeader = JwsHeader.with(MacAlgorithm.HS256).build();
+        return jwtEncoder.encode(JwtEncoderParameters.from(jwsHeader, claims)).getTokenValue();
+    }
+}
+</file>
+
+<file path="service/ProjectCommand.java">
+package ku.cs.project_SE.service;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+//Tee
+@Service
+@Transactional
+public class ProjectCommand {
+
+}
+</file>
+
+<file path="service/ProjectService.java">
+// keam&tee
+package ku.cs.project_SE.service;
+
+import ku.cs.project_SE.dto.project.ProjectCreateDto;
+import ku.cs.project_SE.dto.project.ProjectResponseDto;
+import ku.cs.project_SE.entity.image.Image;
+import ku.cs.project_SE.entity.project.Project;
+import ku.cs.project_SE.mapper.ProjectMapper;
+import ku.cs.project_SE.mapper.helper.UrlBuilder;
+import ku.cs.project_SE.repository.ProjectRepository;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+
+@Service
+public class ProjectService {
+
+    private final ProjectRepository repository;
+    private final ProjectMapper mapper;
+    private final UrlBuilder urlBuilder;
+
+    public ProjectService(ProjectRepository repository, ProjectMapper mapper, UrlBuilder urlBuilder) {
+        this.repository = repository;
+        this.mapper = mapper;
+        this.urlBuilder = urlBuilder;
+    }
+
+    public ProjectResponseDto create(ProjectCreateDto req, Image image) {
+        Project entity = mapper.toEntity(req, image);
+        Project saved = repository.save(entity);
+        return mapper.toDto(saved, urlBuilder);
+    }
+
+    public List<ProjectResponseDto> getAll() {
+        return repository.findAll()
+                .stream()
+                .map(p -> mapper.toDto(p, urlBuilder))
+                .toList();
+    }
+
+    public ProjectResponseDto getByName(String name) {
+        Project p = repository.findById(name).orElse(null);
+        return p == null ? null : mapper.toDto(p, urlBuilder);
+    }
+
+    @Transactional
+    public void delete(String projectName) {
+        repository.delete(repository.findById(projectName).orElseThrow(() -> new IllegalArgumentException("Project not found: " + projectName)));
+    }
+}
+</file>
+
+<file path="service/PromotionService.java">
+package ku.cs.project_SE.service;
+
+import ku.cs.project_SE.dto.PageResponseDto;
+import ku.cs.project_SE.dto.promotion.CreatePromotionDto;
+import ku.cs.project_SE.dto.promotion.PromotionResponseDto;
+import ku.cs.project_SE.dto.promotion.UpdatePromotionDto;
+import ku.cs.project_SE.dto.promotion.action.SetActionRequest;
+import ku.cs.project_SE.dto.promotion.condition.AddCompositeConditionRequest;
+import ku.cs.project_SE.dto.promotion.condition.ConditionSpecDto;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.entity.promotion.Promotion;
+import ku.cs.project_SE.entity.promotion.promotion_action.*;
+import ku.cs.project_SE.entity.promotion.promotion_condition.ConditionFactory;
+import ku.cs.project_SE.entity.promotion.promotion_condition.ConditionSpec;
+import ku.cs.project_SE.entity.promotion.promotion_condition.conditions.CompositeCondition;
+import ku.cs.project_SE.mapper.PromotionMapper;
+import ku.cs.project_SE.repository.*;
+import ku.cs.project_SE.repository.promotion.FixedAmountDiscountActionRepository;
+import ku.cs.project_SE.repository.promotion.GiftActionRepository;
+import ku.cs.project_SE.repository.promotion.PercentageDiscountActionRepository;
+import org.springframework.data.domain.*;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+
+@Service
+@Transactional
+public class PromotionService {
+
+    private final PromotionRepository repository;
+    private final PromotionMapper mapper;
+    private final CompositeConditionRepository compositeRepo;
+    private final ConditionFactory conditionFactory;
+    private final HouseRepository houseRepository;
+    private final PercentageDiscountActionRepository pctRepo;
+    private final FixedAmountDiscountActionRepository fixedRepo;
+    private final GiftActionRepository giftRepo;
+    private final ActionFactory actionFactory;
+
+    public PromotionService(PromotionRepository repository,
+                            PromotionMapper mapper,
+                            CompositeConditionRepository compositeRepo,
+                            ConditionFactory conditionFactory,
+                            HouseRepository houseRepository,
+                            PercentageDiscountActionRepository pctRepo,
+                            FixedAmountDiscountActionRepository fixedRepo,
+                            GiftActionRepository giftRepo,
+                            ActionFactory actionFactory) {
+        this.repository = repository;
+        this.mapper = mapper;
+        this.compositeRepo = compositeRepo;
+        this.conditionFactory = conditionFactory;
+        this.houseRepository = houseRepository;
+        this.pctRepo = pctRepo;
+        this.fixedRepo = fixedRepo;
+        this.giftRepo = giftRepo;
+        this.actionFactory = actionFactory;
+    }
+
+    public PageResponseDto<PromotionResponseDto> search(String query, String filter, int page, int pageSize) {
+        int pageIndex = Math.max(0, page - 1);
+        Pageable pageable = PageRequest.of(pageIndex, pageSize, Sort.by(Sort.Direction.DESC, "promotionId"));
+        String q = (query == null || query.isBlank()) ? null : query.trim();
+        Boolean active = parseActive(filter);
+        Page<Promotion> resultPage;
+        if (q == null && active == null) {
+            resultPage = repository.findAll(pageable);
+        } else if (active != null && q != null) {
+            resultPage = repository.searchWithFilter(q, active, pageable);
+        } else if (active != null) {
+            resultPage = repository.searchWithFilter("", active, pageable);
+        } else {
+            resultPage = repository.search(q, pageable);
+        }
+        List<PromotionResponseDto> items = resultPage.getContent().stream().map(mapper::toDto).toList();
+        return new PageResponseDto<>(items, page, pageSize, resultPage.getTotalElements(), resultPage.getTotalPages());
+    }
+
+    public PromotionResponseDto getById(String id) {
+        return repository.findById(id).map(mapper::toDto).orElse(null);
+    }
+
+    public PromotionResponseDto create(CreatePromotionDto req) {
+        Promotion entity = mapper.toEntity(req);
+        return mapper.toDto(repository.save(entity));
+    }
+
+    public PromotionResponseDto update(String id, UpdatePromotionDto req) {
+        Promotion entity = repository.findById(id).orElseThrow();
+        mapper.applyUpdate(req, entity);
+        return mapper.toDto(repository.save(entity));
+    }
+
+    public void delete(String id) {
+        if (repository.existsById(id)) repository.deleteById(id);
+    }
+
+    public Long addCompositeCondition(String promotionId, AddCompositeConditionRequest req) {
+        Promotion p = repository.findById(promotionId).orElseThrow();
+        List<ConditionSpec> specs = req.conditions() == null ? List.of()
+                : req.conditions().stream().map(this::toSpec).toList();
+        CompositeCondition cc = CompositeCondition.builder()
+                .promotion(p)
+                .operator(req.operator())
+                .conditions(specs)
+                .build();
+        return compositeRepo.save(cc).getId();
+    }
+
+    public boolean check(String promotionId, Long houseId) {
+        House house = houseRepository.findById(houseId).orElseThrow();
+        List<CompositeCondition> list = compositeRepo.findByPromotion_PromotionId(promotionId);
+        if (list.isEmpty()) return true;
+        for (CompositeCondition cc : list) {
+            cc.setResolver(conditionFactory::fromSpec);
+            if (cc.evaluate(house)) return true;
+        }
+        return false;
+    }
+
+    public void setAction(String promotionId, SetActionRequest req) {
+        Promotion p = repository.findById(promotionId).orElseThrow();
+        pctRepo.deleteByPromotion_PromotionId(p.getPromotionId());
+        fixedRepo.deleteByPromotion_PromotionId(p.getPromotionId());
+        giftRepo.deleteByPromotion_PromotionId(p.getPromotionId());
+        PromotionAction action = actionFactory.build(req.type(), p, req.params());
+        if (action instanceof PercentageDiscountAction a) {
+            pctRepo.save(a);
+        } else if (action instanceof FixedAmountDiscountAction a) {
+            fixedRepo.save(a);
+        } else if (action instanceof GiftAction a) {
+            giftRepo.save(a);
+        } else {
+            throw new IllegalArgumentException("Unsupported action instance");
+        }
+    }
+
+    private ConditionSpec toSpec(ConditionSpecDto d) {
+        var s = new ConditionSpec();
+        s.setType(d.type());
+        s.setParams(d.params());
+        return s;
+    }
+
+    private Boolean parseActive(String filter) {
+        if (filter == null || filter.isBlank()) return null;
+        String f = filter.trim().toLowerCase();
+        if (f.equals("true") || f.equals("1") || f.equals("active")) return Boolean.TRUE;
+        if (f.equals("false") || f.equals("0") || f.equals("inactive")) return Boolean.FALSE;
+        return null;
+    }
+}
+</file>
+
+<file path="service/S3/S3PresignService.java">
+// keam
+package ku.cs.project_SE.service.S3;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+import software.amazon.awssdk.services.s3.model.GetObjectRequest;
+import software.amazon.awssdk.services.s3.presigner.S3Presigner;
+import software.amazon.awssdk.services.s3.presigner.model.GetObjectPresignRequest;
+
+import java.net.URL;
+import java.time.Duration;
+
+@Service
+public class S3PresignService {
+
+    private final S3Presigner presigner;
+
+    @Value("${app.aws.s3.bucket}")
+    private String bucket;
+
+    public S3PresignService(S3Presigner presigner) {
+        this.presigner = presigner;
+    }
+
+    public String presignGetUrl(String key, Duration ttl) {
+        var get = GetObjectRequest.builder().bucket(bucket).key(key).build();
+        var req = GetObjectPresignRequest.builder()
+                .signatureDuration(ttl)
+                .getObjectRequest(get)
+                .build();
+        URL url = presigner.presignGetObject(req).url();
+        return url.toString();
+    }
+}
+</file>
+
+<file path="service/S3/S3StorageService.java">
+// keam
+package ku.cs.project_SE.service.S3;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+import software.amazon.awssdk.core.sync.RequestBody;
+import software.amazon.awssdk.services.s3.S3Client;
+import software.amazon.awssdk.services.s3.model.DeleteObjectRequest;
+import software.amazon.awssdk.services.s3.model.PutObjectRequest;
+
+import java.io.IOException;
+import java.time.Instant;
+import java.util.UUID;
+
+@Service
+public class S3StorageService {
+
+    private final S3Client s3;
+
+    @Value("${app.aws.s3.bucket}")
+    private String bucket;
+
+    @Value("${app.aws.s3.basePrefix:}")
+    private String basePrefix;
+
+    public S3StorageService(S3Client s3) {
+        this.s3 = s3;
+    }
+
+    public UploadedObject upload(MultipartFile file, String folder) {
+        try {
+            String ext = guessExt(file.getOriginalFilename());
+            String key = buildKey(folder, ext);
+
+            PutObjectRequest req = PutObjectRequest.builder()
+                    .bucket(bucket)
+                    .key(key)
+                    .contentType(resolveContentType(file))
+                    .contentLength(file.getSize())
+                    //.acl(ObjectCannedACL.PUBLIC_READ)
+                    .build();
+
+            s3.putObject(req, RequestBody.fromInputStream(file.getInputStream(), file.getSize()));
+            return new UploadedObject(bucket, key);
+        } catch (IOException e) {
+            throw new RuntimeException("Upload failed", e);
+        }
+    }
+
+    public void delete(String key) {
+        s3.deleteObject(DeleteObjectRequest.builder().bucket(bucket).key(key).build());
+    }
+
+    private String buildKey(String folder, String ext) {
+        String cleanFolder = (folder == null ? "" : folder.trim().replaceAll("^/|/$", ""));
+        String prefix = (basePrefix == null ? "" : basePrefix) + (cleanFolder.isEmpty() ? "" : cleanFolder + "/");
+        return prefix + Instant.now().toEpochMilli() + "-" + UUID.randomUUID() + (ext.isEmpty() ? "" : "." + ext);
+    }
+
+    private String guessExt(String filename) {
+        if (filename == null) return "";
+        int dot = filename.lastIndexOf('.');
+        return (dot >= 0 && dot < filename.length() - 1) ? filename.substring(dot + 1) : "";
+    }
+
+    private String resolveContentType(MultipartFile f) {
+        String ct = f.getContentType();
+        return (ct == null || ct.isBlank()) ? MediaType.APPLICATION_OCTET_STREAM_VALUE : ct;
+    }
+
+    public record UploadedObject(String bucket, String key) {
+        public String s3Uri() { return "s3://" + bucket + "/" + key; }
+        public String key() { return key; }
+        public String bucket() { return bucket; }
+    }
+}
+</file>
+
+<file path="service/SpecificationComposer.java">
+package ku.cs.project_SE.service;
+
+import ku.cs.project_SE.dto.house.HouseSearchFilterRequestDto;
+import ku.cs.project_SE.entity.house.House;
+import ku.cs.project_SE.factory.house_filter.HouseFilterFactory;
+import org.json.JSONObject;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class SpecificationComposer {
+
+    private final HouseFilterFactory houseFilterFactory;
+
+    public SpecificationComposer() {
+        this.houseFilterFactory = new HouseFilterFactory();
+    }
+
+    /**
+     * Composes multiple filter specifications into a single combined specification using AND logic
+     * @param filterRequest The filter request containing multiple filter criteria
+     * @return Combined specification, or null if no filters
+     */
+    public Specification<House> composeSpecifications(HouseSearchFilterRequestDto filterRequest) {
+        if (filterRequest == null || filterRequest.getFilters() == null || filterRequest.getFilters().isEmpty()) {
+            return null;
+        }
+
+        Specification<House> combinedSpec = null;
+
+        for (HouseSearchFilterRequestDto.FilterCriteriaDto criteria : filterRequest.getFilters()) {
+            String filterName = criteria.getFilterName();
+            JSONObject filterData = new JSONObject(criteria.getFilterData());
+
+            Specification<House> spec = houseFilterFactory.getFilterSpecification(filterName, filterData);
+
+            if (spec != null) {
+                if (combinedSpec == null) {
+                    combinedSpec = Specification.where(spec);
+                } else {
+                    combinedSpec = combinedSpec.and(spec);
+                }
+            }
+        }
+
+        return combinedSpec;
+    }
+
+    /**
+     * Creates a text search specification for searching across project name, caption, and description
+     * @param query The search query
+     * @return Search specification, or null if query is empty
+     */
+    public Specification<House> createTextSearchSpecification(String query) {
+        if (query == null || query.isBlank()) {
+            return null;
+        }
+
+        return (root, criteriaQuery, criteriaBuilder) -> {
+            String searchPattern = "%" + query.toLowerCase() + "%";
+            return criteriaBuilder.or(
+                    criteriaBuilder.like(criteriaBuilder.lower(root.get("project").get("projectName")), searchPattern),
+                    criteriaBuilder.like(criteriaBuilder.lower(root.get("caption")), searchPattern),
+                    criteriaBuilder.like(criteriaBuilder.lower(root.get("description")), searchPattern)
+            );
+        };
+    }
+
+    /**
+     * Combines text search and filter specifications using AND logic
+     * @param query Text search query
+     * @param filterRequest Filter criteria
+     * @return Combined specification, or null if both are empty
+     */
+    public Specification<House> composeSearchAndFilters(String query, HouseSearchFilterRequestDto filterRequest) {
+        Specification<House> textSearchSpec = createTextSearchSpecification(query);
+        Specification<House> filterSpec = composeSpecifications(filterRequest);
+
+        if (textSearchSpec == null && filterSpec == null) {
+            return null;
+        } else if (textSearchSpec == null) {
+            return filterSpec;
+        } else if (filterSpec == null) {
+            return textSearchSpec;
+        } else {
+            return Specification.where(textSearchSpec).and(filterSpec);
+        }
+    }
+}
+</file>
+
+<file path="service/UserService.java">
+package ku.cs.project_SE.service;
+
+
+
+import com.nimbusds.jose.util.Pair;
+import ku.cs.project_SE.dto.auth.RegisterRequestDto;
+import ku.cs.project_SE.entity.user.Role;
+import ku.cs.project_SE.entity.user.User;
+import ku.cs.project_SE.exception.UserExistsException;
+import ku.cs.project_SE.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.parameters.P;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+import java.util.UUID;
+
+//Tee
+@Service
+public class UserService implements UserDetailsService {
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    public Optional<User> findByEmailOrPhoneNumber(String identifier) {
+        return userRepository.findByEmailOrPhoneNumber(identifier,identifier);
+    }
+    public Optional<User> findByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+    public Optional<User> findByPhoneNumber(String phoneNumber) {
+        return userRepository.findByPhoneNumber(phoneNumber);
+    }
+    public User findById(UUID id) {
+        return userRepository.findById(id).orElseThrow();
+    }
+
+    public User createUser(RegisterRequestDto dto) throws RuntimeException {
+        Optional<User> existingUserEmail = this.findByEmail(dto.email());
+        Optional<User> existingUserPhoneNumber = this.findByPhoneNumber(dto.phoneNumber());
+
+        if(existingUserEmail.isPresent() ){
+            throw new UserExistsException("Email already exists");
+        }
+        else if (existingUserPhoneNumber.isPresent()){
+            throw new UserExistsException("Phone number already exists");
+        }
+
+        User user = User.builder()
+                .email(dto.email())
+                .phoneNumber(dto.phoneNumber())
+                .firstName(dto.firstName())
+                .lastName(dto.lastName())
+                .password(passwordEncoder.encode(dto.password()))
+                .role(Role.NORMAL)
+                .build();
+
+        userRepository.save(user);
+        return user;
+    }
+
+
+    @Override
+    public UserDetails loadUserByUsername(String identifier) throws UsernameNotFoundException {
+//        System.out.println("XXX "+identifier);
+        if (identifier.contains("@")){
+
+        }
+        User user = userRepository.findByEmailOrPhoneNumber(identifier,identifier)
+                .orElseThrow(() -> new UsernameNotFoundException(identifier + " not found"));
+
+        return new org.springframework.security.core.userdetails.User(
+                user.getEmail(),
+                user.getPassword(),
+                java.util.List.of(new SimpleGrantedAuthority("ROLE_" + user.getRole().name()))
+        );
+    }
+
+}
+</file>
+
+</files>
